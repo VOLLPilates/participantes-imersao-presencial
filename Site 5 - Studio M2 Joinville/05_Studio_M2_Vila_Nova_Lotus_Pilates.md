@@ -1,0 +1,45 @@
+# Relatório de Identificação Digital - Studio M2 / Lótus Pilates (Unidade Vila Nova)
+
+## O Studio possui um site? (em domínio próprio)
+Se sim: analise a estrutura e SEO, e crie um relatorio.md com cada ponto que poderia ser melhorado;
+Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. Busque no instagram Logo e cores mais utilizadas em publicações com imagens.
+
+## Regras de Desenvolvimento:
+1. Lading Page One Page para divulgação do Studio de Pilates. 
+2. O site deve ser criado em HTML, CSS e JS sem Vercel, totalmente stático mesmo,
+3. Deve ter em média 7 seções.
+4. O site deve ser desenvolvimento com foco em SEO, mobile e responsividade;
+5. Busque por imagens reais, endereço, paletas de cores, serviços oferecidos, horário de funcionamento, comodidades se tiver.
+
+## Regras de Desenvolvimento:
+1. Lading Page One Page para divulgação do Studio de Pilates. 
+2. O site deve ser criado em HTML, CSS e JS sem Vercel, totalmente stático mesmo,
+3. Deve ter em média 7 seções.
+
+## 📌 Resumo Executivo
+* **Nome do Estabelecimento:** Studio M2 / Lótus Pilates (Unidade Vila Nova)
+* **Localização:** Joinville / SC
+* **Status no Google Business:** Sim (Cadastrado sob o nome Lótus Pilates)
+* **Nome do Cadastro no Google:** Lótus Pilates - Vila Nova
+
+---
+
+## 📍 Dados de Endereço e Contato
+* **Endereço Completo:** Rua São Firmino, 88, Sala 1 - Vila Nova, Joinville - SC, CEP 89237-110
+* **Telefone / WhatsApp:** +55 47 99289-7343
+
+---
+
+## 🌐 Links Directos e Presença Digital
+* 📍 **Link do Studio no Google Business / Google Maps:** [Lótus Pilates - Vila Nova](https://www.google.com/maps/search/?api=1&query=Lotus%20Pilates%20Rua%20Sao%20Firmino%2088%20Joinville%20SC)
+* 📸 **Instagram Oficial:** Integrado às redes do grupo Lótus Pilates Joinville
+* 🌐 **Website Oficial:** https://lotuspilatesjlle.com.br/unidades-lotus-pilates-joinville/
+
+### 🔗 Outras Páginas Encontradas na Internet:
+* [Lótus Pilates - Portal de Unidades Joinville](https://lotuspilatesjlle.com.br/unidades-lotus-pilates-joinville/)
+
+---
+
+## 📋 Serviços e Observações
+* **Serviços Oferecidos:** Aulas de Pilates e Fisioterapia.
+* **Observações Complementares:** No endereço solicitado (Rua São Firmino, 88), o estabelecimento ativo no Google Business está registrado como Lótus Pilates.
