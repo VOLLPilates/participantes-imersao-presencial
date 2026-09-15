@@ -1,0 +1,9 @@
+{
+  "name": "a2-studio-pilates",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node -e \"const fs=require('fs');const files=['index.html','css/style.css','js/script.js'];let ok=true;for(const f of files){if(!fs.existsSync(f)){console.error('Missing: '+f);ok=false;}}if(ok)console.log('Build OK - all static files present');process.exit(ok?0:1)\""
+  }
+}
