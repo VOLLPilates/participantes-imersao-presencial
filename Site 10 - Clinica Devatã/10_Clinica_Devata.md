@@ -32,7 +32,7 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 
 ## 🌐 Links Directos e Presença Digital
 * 📍 **Link do Studio no Google Business / Google Maps:** [Clínica Devatã | Especialista em dor | Pilates](https://www.google.com/maps/search/?api=1&query=Clinica%20Devata%20Rua%20Osvaldo%20Cruz%20201%20Videira%20SC)
-* 📸 **Instagram Oficial:** Divulgação vinculada à Dra. Tatiane Denardi
+* 📸 **Instagram Oficial:** [Divulgação vinculada à Dra. Tatiane Denardi](https://www.instagram.com/clinica.devata/)
 * 🌐 **Website Oficial:** Atendimento via WhatsApp e Google Meu Negócio
 
 ### 🔗 Outras Páginas Encontradas na Internet:
