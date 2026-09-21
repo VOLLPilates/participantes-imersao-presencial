@@ -173,3 +173,74 @@
     grid-template-columns:1fr;
   }
 }
+
+/* Vertical layout pass: centered sections and stacked conversion blocks. */
+.opening-line{
+  grid-template-columns:1fr;
+  gap:.7rem;
+  text-align:center;
+}
+.opening-line span:last-child{
+  text-align:center;
+}
+.modalities{
+  max-width:1120px;
+  margin-inline:auto;
+}
+.modalities article{
+  grid-template-columns:1fr;
+  gap:1rem;
+  max-width:940px;
+}
+.modalities article>a{
+  justify-self:start;
+}
+.hybrid,
+.schedule,
+.faq,
+.contact{
+  grid-template-columns:1fr;
+  gap:2.5rem;
+}
+.hybrid{
+  text-align:center;
+}
+.hybrid h2,
+.hybrid>p{
+  margin-inline:auto;
+}
+.schedule{
+  max-width:980px;
+  margin-inline:auto;
+  background:var(--black);
+}
+.reviews{
+  grid-template-columns:1fr;
+  max-width:980px;
+  margin-inline:auto;
+}
+.reviews-title{
+  padding-right:0;
+  text-align:center;
+}
+.reviews h2{
+  max-width:13ch;
+  margin-inline:auto;
+}
+.reviews blockquote{
+  min-height:0;
+}
+.faq>div,
+.contact>div{
+  max-width:920px;
+  width:100%;
+  margin-inline:auto;
+}
+.faq>div:first-child,
+.contact>div:first-child{
+  text-align:center;
+}
+.contact>div:last-child{
+  align-items:center;
+  text-align:center;
+}

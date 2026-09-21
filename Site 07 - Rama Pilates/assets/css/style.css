@@ -185,3 +185,84 @@
     padding:3rem 22px;
   }
 }
+
+/* Vertical layout pass: more like Sites 01/10, with narrower reading bands. */
+.journey ol{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.journey li:nth-child(2n){
+  border-right:0;
+}
+.journey li:nth-child(n + 3){
+  border-top:1px solid var(--line);
+}
+.services,
+.specialist,
+.schedule,
+.faq,
+.contact{
+  grid-template-columns:1fr;
+  gap:2.5rem;
+}
+.services-title,
+.specialist-name,
+.schedule>div,
+.faq>div:first-child,
+.contact>div:first-child{
+  max-width:820px;
+  margin-inline:auto;
+  text-align:center;
+}
+.services h2,
+.specialist h2,
+.faq h2,
+.contact h2{
+  margin-inline:auto;
+}
+.accordions,
+.faq>div:last-child{
+  width:min(920px,100%);
+  margin-inline:auto;
+}
+.specialist>div:last-child{
+  max-width:880px;
+  margin-inline:auto;
+  text-align:center;
+}
+.schedule{
+  text-align:center;
+}
+.schedule>div{
+  justify-content:center;
+}
+.schedule>p{
+  margin-inline:auto;
+}
+.reviews{
+  grid-template-columns:1fr;
+  max-width:980px;
+  margin-inline:auto;
+}
+.reviews header{
+  padding-right:0;
+  text-align:center;
+}
+.reviews h2{
+  max-width:13ch;
+  margin-inline:auto;
+}
+.reviews blockquote{
+  min-height:0;
+}
+.contact>div:last-child{
+  align-items:center;
+  text-align:center;
+}
+@media(max-width:680px){
+  .journey ol{
+    grid-template-columns:1fr;
+  }
+  .journey li{
+    border-right:0;
+  }
+}

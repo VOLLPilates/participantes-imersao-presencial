@@ -139,3 +139,67 @@
     min-height:600px;
   }
 }
+
+/* Vertical layout pass: one-section-at-a-time landing flow. */
+.brand-band{
+  flex-wrap:wrap;
+}
+.lane{
+  grid-template-columns:1fr;
+  min-height:0;
+  gap:2rem;
+  text-align:center;
+}
+.lane>div:first-child{
+  align-items:center;
+}
+.lane h2,
+.lane p{
+  margin-inline:auto;
+}
+.principles{
+  grid-template-columns:1fr;
+  max-width:980px;
+  margin-inline:auto;
+  border-bottom:0;
+}
+.principles>p{
+  max-width:760px;
+}
+.principles div{
+  padding:1.3rem 0;
+}
+.testimonials{
+  grid-template-columns:1fr;
+  max-width:980px;
+  margin-inline:auto;
+}
+.testimonials-title{
+  padding-right:0;
+  text-align:center;
+}
+.testimonials-title h2{
+  max-width:13ch;
+  margin-inline:auto;
+}
+.faq{
+  grid-template-columns:1fr;
+  gap:2.5rem;
+}
+.faq>div:first-child,
+.faq>div:last-child{
+  max-width:920px;
+  width:100%;
+  margin-inline:auto;
+}
+.faq>div:first-child{
+  text-align:center;
+}
+.location{
+  grid-template-columns:1fr;
+  gap:2rem;
+  text-align:center;
+}
+.location-actions{
+  align-items:center;
+}

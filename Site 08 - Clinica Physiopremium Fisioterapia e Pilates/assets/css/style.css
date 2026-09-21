@@ -882,3 +882,78 @@ summary:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* Vertical layout pass: clinical story in stacked landing-page bands. */
+.credibility {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1080px;
+  margin-inline: auto;
+}
+.credibility small {
+  grid-column: 1 / -1;
+  position: static;
+  padding: 1rem 2rem;
+  color: #d8f7f5;
+}
+.modalities {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.tabs {
+  justify-content: center;
+}
+.panels article {
+  max-width: 820px;
+  margin-inline: auto;
+  text-align: center;
+}
+.panels p {
+  margin-inline: auto;
+}
+.structure,
+.hours,
+.ratings,
+.faq,
+.contact {
+  grid-template-columns: 1fr;
+}
+.structure-copy,
+.structure-aside,
+.hours > div,
+.ratings > div,
+.faq > div,
+.contact > div,
+.contact address {
+  max-width: 920px;
+  width: 100%;
+  margin-inline: auto;
+}
+.structure-copy,
+.structure-aside,
+.hours > div:first-child,
+.ratings > div:first-child,
+.faq > div:first-child,
+.contact > div {
+  text-align: center;
+}
+.structure-aside {
+  align-items: center;
+}
+.score {
+  border-right: 0;
+  border-bottom: 1px solid #a8c0bd;
+  min-height: 0;
+  padding-bottom: 2.5rem;
+}
+.google-reviews {
+  grid-template-columns: 1fr;
+}
+.contact address {
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .credibility {
+    grid-template-columns: 1fr;
+  }
+}
