@@ -7,3 +7,80 @@
 .brand{width:230px;display:flex;align-items:center}.brand img{display:block;width:100%;height:auto;object-fit:contain}
 @media(max-width:900px){.brand{width:210px}}
 @media(max-width:560px){.brand{width:175px}}
+
+/* Layout refinement: institutional statement above a stable photo panel. */
+.hero{
+  height:auto;
+  min-height:0;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:auto minmax(360px,48svh);
+  align-items:stretch;
+  background:var(--mist);
+  color:var(--deep);
+}
+.hero picture{
+  position:relative;
+  inset:auto;
+  grid-row:2;
+  background:url("../img/hero-lotus-anita.png") center 45% / cover no-repeat;
+}
+.hero picture img{
+  object-position:center 45%;
+  color:transparent;
+  font-size:0;
+}
+.hero-overlay{
+  display:none;
+}
+.hero-copy{
+  grid-row:1;
+  width:100%;
+  padding:clamp(4rem,7vw,6rem) max(6vw,32px);
+  grid-template-columns:.5fr 1.35fr auto;
+  color:var(--deep);
+}
+.hero-copy p{
+  color:var(--teal);
+}
+.hero h1{
+  max-width:14ch;
+}
+.hero .button.light{
+  background:var(--deep);
+  color:#fff;
+}
+.brand-band{
+  justify-content:center;
+}
+.lane>div:first-child{
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.75rem;
+}
+.lane>div:first-child span{
+  width:auto;
+  color:inherit;
+  text-transform:uppercase;
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+@media(max-width:900px){
+  .hero-copy{
+    grid-template-columns:1fr;
+  }
+}
+@media(max-width:560px){
+  .hero{
+    height:auto;
+    min-height:0;
+    grid-template-rows:auto minmax(260px,36svh);
+  }
+  .hero-copy{
+    padding:3rem 22px 2.5rem;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem,12vw,3.7rem);
+  }
+}

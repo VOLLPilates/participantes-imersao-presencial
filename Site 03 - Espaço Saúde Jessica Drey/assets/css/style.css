@@ -4,3 +4,104 @@
 @media(max-width:900px){.site-header nav{display:none}.section-intro,.experience,.reviews,.faq,.contact{grid-template-columns:1fr}.section-intro{gap:1rem}.reviews-head{grid-column:1/-1}.experience-facts div{grid-template-columns:1fr}.contact{align-items:start}.hero-note{display:none}.modality-index article{grid-template-columns:48px 1fr}.modality-index article p{grid-column:2}.brand{width:180px}}
 @media(max-width:560px){.site-header{height:76px;padding-inline:18px}.brand{width:150px}.header-cta{font-size:0;width:48px;padding:0}.header-cta span{font-size:1rem}.hero{min-height:calc(100svh - 76px)}.hero-copy{padding:4rem 22px 3rem}.hero h1{font-size:clamp(2.8rem,15vw,4.2rem)}.hero-actions{align-items:flex-start;flex-direction:column}.modalities,.reviews{padding-inline:22px}.modality-index article{gap:1rem}.reviews blockquote{min-height:210px}.faq,.contact{padding-inline:22px}footer{flex-direction:column;gap:1rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Layout refinement: campaign split hero and labeled modality index. */
+.hero{
+  min-height:calc(92svh - 86px);
+  display:grid;
+  grid-template-columns:minmax(340px,.85fr) minmax(520px,1.15fr);
+  align-items:stretch;
+  background:var(--plum);
+}
+.hero-media{
+  position:relative;
+  inset:auto;
+  grid-column:2;
+  min-height:560px;
+  background:url("../img/hero-jessica-drey.png") 58% center / cover no-repeat;
+}
+.hero-media img{
+  object-position:58% center;
+  color:transparent;
+  font-size:0;
+}
+.hero-shade{
+  display:none;
+}
+.hero-copy{
+  grid-column:1;
+  grid-row:1;
+  width:auto;
+  max-width:none;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:linear-gradient(135deg,var(--wine) 0%,var(--plum) 78%);
+  padding:clamp(4rem,7vw,7rem) clamp(2rem,5vw,5rem);
+}
+.hero h1{
+  font-size:clamp(3.2rem,6vw,5.4rem);
+  max-width:9.4ch;
+}
+.hero-note{
+  right:clamp(2rem,5vw,5rem);
+  bottom:2rem;
+  writing-mode:horizontal-tb;
+  background:#fff;
+  color:var(--plum);
+  padding:.85rem 1rem;
+}
+.section-intro{
+  grid-template-columns:.42fr 1.15fr .9fr;
+}
+.modality-index article{
+  grid-template-columns:8rem 1fr 1fr;
+}
+.modality-index span{
+  display:inline-flex;
+  width:max-content;
+  align-items:center;
+  min-height:34px;
+  padding:.25rem .7rem;
+  background:var(--rose);
+  color:var(--wine);
+  border-radius:999px;
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+@media(max-width:900px){
+  .hero{
+    min-height:auto;
+    grid-template-columns:1fr;
+  }
+  .section-intro{
+    grid-template-columns:1fr;
+  }
+  .hero-media{
+    grid-column:1;
+    grid-row:1;
+    min-height:42svh;
+  }
+  .hero-copy{
+    grid-row:2;
+  }
+}
+@media(max-width:560px){
+  .hero{
+    min-height:auto;
+  }
+  .hero-media{
+    min-height:34svh;
+  }
+  .hero h1{
+    font-size:clamp(2.7rem,14vw,3.8rem);
+  }
+  .modality-index article{
+    grid-template-columns:1fr;
+    gap:.5rem;
+  }
+  .modality-index article p{
+    grid-column:auto;
+  }
+}
