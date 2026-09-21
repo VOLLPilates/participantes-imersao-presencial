@@ -14,12 +14,11 @@
   --ink: oklch(0.97 0.004 55);
   --muted: oklch(0.74 0.014 55);
   --line: oklch(0.97 0.004 55 / 0.16);
-  --accent: oklch(0.66 0.22 35);
-  --accent-ink: oklch(0.15 0.04 35);
+  --accent: #05ecb4;
+  --accent-ink: #061914;
   --content: 1440px;
   --gutter: clamp(1.25rem, 4vw, 4.5rem);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --z-sticky: 20;
 }
 
 * {
@@ -68,69 +67,6 @@ img {
   transform: translateY(0);
 }
 
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: var(--z-sticky);
-  display: flex;
-  min-height: 76px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  padding: 0 var(--gutter);
-  border-bottom: 1px solid var(--line);
-  background: oklch(0.13 0.008 50 / 0.96);
-}
-
-.wordmark {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  gap: 0.75rem;
-  font-size: 0.95rem;
-  font-weight: 650;
-  text-decoration: none;
-}
-
-.wordmark__symbol {
-  display: grid;
-  width: 34px;
-  height: 34px;
-  place-items: center;
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-size: 0.8rem;
-  font-weight: 850;
-}
-
-.topbar__count {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.87rem;
-}
-.topbar__count strong {
-  color: var(--ink);
-  font-weight: 750;
-}
-
-.hero {
-  position: relative;
-  display: grid;
-  min-height: min(780px, calc(88svh - 76px));
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
-  overflow: hidden;
-  border-bottom: 1px solid var(--line);
-}
-
-.hero__content {
-  display: flex;
-  max-width: 980px;
-  flex-direction: column;
-  justify-content: center;
-  padding: clamp(4rem, 9vw, 8rem) var(--gutter);
-}
-
-.hero__edition,
 .showcase__index {
   margin: 0 0 1.3rem;
   color: var(--accent);
@@ -140,82 +76,10 @@ img {
   text-transform: uppercase;
 }
 
-.hero h1 {
-  max-width: 12ch;
-  margin: 0;
-  font-size: clamp(4.35rem, 9.4vw, 6rem);
-  font-weight: 720;
-  letter-spacing: -0.04em;
-  line-height: 0.88;
-  text-wrap: balance;
-}
-
-.hero__lead {
-  max-width: 650px;
-  margin: clamp(2rem, 5vw, 3.2rem) 0 0;
-  color: var(--muted);
-  font-size: clamp(1.08rem, 1.7vw, 1.35rem);
-  line-height: 1.55;
-  text-wrap: pretty;
-}
-
-.hero__link {
-  display: inline-flex;
-  width: fit-content;
-  min-height: 48px;
-  align-items: center;
-  gap: 0.85rem;
-  margin-top: clamp(2rem, 5vw, 3rem);
-  border-bottom: 1px solid color-mix(in oklch, var(--accent) 70%, transparent);
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition:
-    gap 220ms var(--ease),
-    color 220ms var(--ease),
-    border-color 220ms var(--ease);
-}
-
-.hero__link:hover,
-.hero__link:focus-visible {
-  gap: 1.2rem;
-  border-color: var(--accent);
-  color: var(--accent);
-  outline: none;
-}
-
-.hero__signal {
-  position: relative;
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: clamp(2rem, 4vw, 4rem);
-  background: var(--accent);
-  color: var(--accent-ink);
-}
-
-.hero__signal span {
-  display: block;
-  margin-left: -0.08em;
-  font-size: clamp(9rem, 19vw, 20rem);
-  font-weight: 850;
-  letter-spacing: -0.04em;
-  line-height: 0.76;
-}
-
-.hero__signal p {
-  margin: 0;
-  font-size: clamp(1.25rem, 2.4vw, 2rem);
-  font-weight: 700;
-  line-height: 1.04;
-}
-
 .showcase {
   width: min(var(--content), 100%);
   margin: 0 auto;
-  padding: clamp(5rem, 9vw, 9rem) var(--gutter) clamp(6rem, 10vw, 10rem);
+  padding: clamp(3rem, 6vw, 6rem) var(--gutter) clamp(5rem, 9vw, 8rem);
 }
 
 .showcase__intro {
@@ -322,7 +186,7 @@ img {
 
 .project:hover .project__media,
 .project:focus-visible .project__media {
-  outline: 2px solid var(--project-accent);
+  outline: 2px solid var(--accent);
   outline-offset: 5px;
 }
 
@@ -354,8 +218,8 @@ img {
 
 .project__number {
   left: 1rem;
-  background: var(--project-accent);
-  color: #111;
+  background: var(--accent);
+  color: var(--accent-ink);
 }
 .project__status {
   right: 1rem;
@@ -409,61 +273,10 @@ img {
 .project:hover .project__action,
 .project:focus-visible .project__action {
   gap: 0.8rem;
-  color: var(--project-accent);
-}
-
-.footer {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: 2rem;
-  align-items: center;
-  padding: clamp(2.4rem, 5vw, 4rem) var(--gutter);
-  border-top: 1px solid var(--line);
-  background: oklch(0.105 0.007 50);
-}
-
-.wordmark--footer {
-  font-size: 0.9rem;
-}
-.footer p {
-  max-width: 540px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
-.footer__top {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  gap: 0.55rem;
-  font-size: 0.86rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.footer__top:hover,
-.footer__top:focus-visible {
   color: var(--accent);
-  outline: none;
 }
 
 @media (max-width: 880px) {
-  .hero {
-    min-height: auto;
-    grid-template-columns: 1fr;
-  }
-  .hero__content {
-    min-height: 620px;
-  }
-  .hero__signal {
-    min-height: 230px;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-  .hero__signal span {
-    font-size: clamp(7rem, 32vw, 12rem);
-  }
   .showcase__intro {
     grid-template-columns: 1fr;
     align-items: start;
@@ -474,31 +287,6 @@ img {
 }
 
 @media (max-width: 720px) {
-  .topbar {
-    min-height: 68px;
-  }
-  .topbar__count {
-    font-size: 0.78rem;
-  }
-  .topbar__count strong {
-    display: block;
-    line-height: 1;
-  }
-  .hero__content {
-    min-height: min(650px, calc(100svh - 68px));
-    padding-top: 4.25rem;
-    padding-bottom: 4.25rem;
-  }
-  .hero h1 {
-    font-size: clamp(3.5rem, 18vw, 5.5rem);
-  }
-  .hero__signal {
-    min-height: 190px;
-    padding: 1.5rem var(--gutter);
-  }
-  .hero__signal p {
-    font-size: 1.2rem;
-  }
   .project-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
@@ -510,26 +298,9 @@ img {
   .project__action {
     width: fit-content;
   }
-  .footer {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
 }
 
 @media (max-width: 430px) {
-  .wordmark > span:last-child {
-    max-width: 125px;
-    line-height: 1.08;
-  }
-  .hero h1 {
-    font-size: clamp(3.15rem, 17vw, 4.25rem);
-  }
-  .hero__signal span {
-    font-size: 6.5rem;
-  }
-  .hero__signal p {
-    font-size: 1rem;
-  }
   .project__number,
   .project__status {
     top: 0.7rem;
