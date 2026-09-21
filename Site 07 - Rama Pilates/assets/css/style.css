@@ -1,0 +1,374 @@
+@font-face {
+  font-family: Afacad;
+  src: url("../afacad-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: Afacad;
+  src: url("../afacad-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --navy: #082b4b;
+  --cyan: #30d9e8;
+  --pink: #f444a1;
+  --ice: #edfaff;
+  --ink: #17202a;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: Afacad, Arial, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+a {
+  color: inherit;
+}
+.skip {
+  position: fixed;
+  top: -5rem;
+  left: 1rem;
+  z-index: 30;
+  background: var(--cyan);
+  padding: 1rem;
+}
+.skip:focus {
+  top: 1rem;
+}
+body > header {
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1rem, 5vw, 5rem);
+  border-bottom: 1px solid #d4e4eb;
+}
+.brand {
+  min-height: 44px;
+  display: grid;
+  grid-template-columns: 2.8rem auto;
+  text-decoration: none;
+  line-height: 1;
+}
+.brand > span {
+  grid-row: 1/3;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--pink);
+  color: #fff;
+  font-weight: 700;
+}
+.brand strong {
+  font-size: 1.4rem;
+  color: var(--navy);
+}
+.brand small {
+  color: #5c7280;
+}
+.brand + nav {
+  display: flex;
+  gap: 2rem;
+}
+.brand + nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: none;
+}
+.head-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  background: var(--navy);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+}
+.hero-message {
+  min-height: 32rem;
+  background: var(--ice);
+  padding: clamp(4rem, 7vw, 7rem) clamp(1.2rem, 7vw, 8rem);
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 6vw;
+  align-items: end;
+}
+.hero-message > div:first-child p,
+.journey-head p,
+.services-intro > p,
+.specialist > div p:first-child,
+.care-principles header p,
+.contact p {
+  color: #0b7892;
+  font-weight: 700;
+}
+.hero-message h1,
+.journey h2,
+.services h2,
+.specialist h2,
+.care-principles h2,
+.faq h2,
+.contact h2 {
+  font-size: clamp(3rem, 6.5vw, 6rem);
+  line-height: 0.94;
+  letter-spacing: 0;
+  margin: 0.8rem 0;
+}
+.hero-action {
+  font-size: 1.2rem;
+}
+.hero-action a,
+.contact a {
+  display: inline-block;
+  background: var(--pink);
+  color: #fff;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+.hero-photo {
+  height: min(62rem, 70svh);
+  position: relative;
+  overflow: hidden;
+}
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-photo picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-photo > .visual-note {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: var(--cyan);
+  color: var(--navy);
+  width: min(25rem, 72vw);
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+}
+.journey {
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.2rem, 7vw, 8rem);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 7vw;
+}
+.journey-head {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+.journey ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.journey li {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  border-top: 1px solid #bfcbd2;
+}
+.journey li:last-child {
+  border-bottom: 1px solid #bfcbd2;
+}
+.journey li span {
+  color: var(--pink);
+  font-weight: 700;
+}
+.journey li strong {
+  font-size: 2rem;
+  color: var(--navy);
+}
+.services {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  background: var(--navy);
+  color: #fff;
+}
+.services-intro {
+  padding: clamp(4rem, 7vw, 7rem);
+}
+.services-intro > p {
+  color: var(--cyan);
+}
+.accordions details {
+  border-bottom: 1px solid #ffffff4d;
+  padding: 0 2rem;
+}
+.accordions summary {
+  min-height: 8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.8rem;
+}
+.accordions details p {
+  padding: 0 0 2rem;
+  max-width: 40rem;
+  color: #c7d7e1;
+}
+.specialist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cyan);
+  color: var(--navy);
+}
+.signature {
+  min-height: 40rem;
+  background: var(--pink);
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: 4rem;
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 700;
+  line-height: 0.7;
+}
+.specialist > div:last-child {
+  padding: clamp(4rem, 7vw, 7rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.specialist h2 {
+  font-size: clamp(2.7rem, 5vw, 5rem);
+}
+.specialist a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+}
+.care-principles {
+  padding: clamp(5rem, 8vw, 8rem) clamp(1.2rem, 7vw, 8rem);
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.7fr;
+  gap: 4rem;
+  align-items: end;
+}
+.care-principles h2 {
+  font-size: clamp(2.5rem, 4.5vw, 4.7rem);
+}
+.care-principles article {
+  padding-top: 1.5rem;
+  border-top: 3px solid var(--cyan);
+}
+.care-principles article strong {
+  font-size: 1.5rem;
+  color: var(--pink);
+  display: block;
+}
+.faq {
+  padding: clamp(5rem, 8vw, 8rem) clamp(1.2rem, 16vw, 18rem);
+  background: var(--ice);
+}
+.faq h2 {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  margin-bottom: 2rem;
+}
+.faq details {
+  border-top: 1px solid #a9c1cb;
+  padding: 1.2rem 0;
+}
+.faq details:last-child {
+  border-bottom: 1px solid #a9c1cb;
+}
+.faq summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+}
+.contact {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  background: var(--navy);
+  color: #fff;
+}
+.contact > div,
+.contact address {
+  padding: clamp(4rem, 7vw, 7rem);
+}
+.contact h2 {
+  font-size: clamp(3rem, 6vw, 6rem);
+  max-width: 12ch;
+}
+.contact address {
+  font-style: normal;
+  background: #061f36;
+  display: flex;
+  align-items: center;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem clamp(1.2rem, 7vw, 8rem);
+  background: #061f36;
+  color: #fff;
+}
+footer a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 4px;
+}
+@media (max-width: 800px) {
+  body > header nav {
+    display: none;
+  }
+  .hero-message,
+  .journey,
+  .services,
+  .specialist,
+  .care-principles,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+  .hero-message {
+    min-height: auto;
+  }
+  .journey-head {
+    position: static;
+  }
+  .hero-photo > .visual-note {
+    width: 75vw;
+  }
+  .signature {
+    min-height: 25rem;
+  }
+  .care-principles {
+    gap: 2rem;
+  }
+  .head-cta {
+    font-size: 0.8rem;
+  }
+  .contact address {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+}

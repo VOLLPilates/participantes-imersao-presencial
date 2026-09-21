@@ -1,0 +1,23 @@
+body {
+  overflow-x: hidden;
+}
+.hero > *,
+.structure > *,
+.ratings > *,
+.faq > *,
+.contact > * {
+  min-width: 0;
+}
+@media (max-width: 820px) {
+  .modalities {
+    overflow: hidden;
+  }
+  .tabs {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .section-head h2,
+  .structure h2 {
+    overflow-wrap: anywhere;
+  }
+}
