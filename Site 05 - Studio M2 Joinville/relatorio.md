@@ -24,4 +24,5 @@ Revisão realizada em 21 de setembro de 2026.
 - Diretórios antigos ainda apontam Rua Joaquim Girardi. O endereço atual do site oficial, Rua São Firmino, foi mantido.
 - Fisioterapia não é anunciada para esta unidade. Horários e avaliações específicas não foram publicados por falta de confirmação inequívoca.
 - A fotografia é representativa e não registra a instalação real.
+- A revisão visual de 21/09/2026 preservou a direção esportiva aprovada e manteve Pilates como único serviço anunciado para a unidade.
 

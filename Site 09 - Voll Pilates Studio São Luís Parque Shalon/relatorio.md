@@ -26,4 +26,5 @@ Revisão realizada em 21 de setembro de 2026.
 - A TotalPass passou a ser exibida após localização da página específica no endereço da unidade.
 - “Aula experimental”, nota e volume não confirmados continuam fora da página. Avaliações permanecem fora do JSON-LD.
 - A fotografia é representativa e não documenta a instalação ou os profissionais.
+- A faixa inicial passou a mostrar, sem rolagem adicional, o horário publicado e os acessos confirmados por Wellhub e TotalPass.
 

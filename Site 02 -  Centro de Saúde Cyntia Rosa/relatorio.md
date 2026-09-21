@@ -18,4 +18,6 @@ Revisão realizada em 21 de setembro de 2026.
 
 - Não foi localizada presença digital oficial inequívoca ligada simultaneamente ao nome, endereço e telefone. Por isso, não foram publicados Instagram, Facebook, horários ou avaliações.
 - A fotografia é representativa e não documenta a instalação, a equipe ou um atendimento real do Centro.
+- O logotipo e o favicon fornecidos pela organização foram aplicados em 21/09/2026.
+- A página passou a destacar somente os fatos confirmados: fisioterapia, saúde integrativa, endereço e consulta de horários pelo WhatsApp.
 

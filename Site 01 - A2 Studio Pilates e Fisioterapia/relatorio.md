@@ -18,9 +18,13 @@ Revisão realizada em 21 de setembro de 2026.
 - Planilha oficial do evento: identificação do participante e endereço.
 - Google Business: https://www.google.com/search?q=A2+Studio+Pilates+e+Fisioterapia+Joao+Pessoa — endereço completo, telefone comercial, horário, nota, volume e autoria dos depoimentos.
 - Instagram oficial: https://instagram.com/a2studiopilates — vínculo com a marca.
+- Facebook oficial: https://www.facebook.com/a2studiopilates/ — nome, endereço e publicações ligados diretamente ao estúdio.
 
 ## Divergências e decisões
 
 - A planilha informa o número +55 83 99938-1354. O Google Business associa o número +55 83 98804-0359 diretamente ao estúdio; por isso, o telefone comercial público foi mantido no site.
 - O domínio `a2studiopilates.com.br` não foi confirmado como presença oficial e foi removido dos metadados.
 - Nota e avaliações aparecem apenas no conteúdo visível. Nenhum `AggregateRating` ou `Review` foi incluído no JSON-LD.
+- A menção à marca MetaLife foi removida por não estar confirmada nas fontes oficiais consultadas.
+- A prova social passou a reunir seis avaliações: os textos aprovados de Mariana Sá e Silvana Mendes e sínteses fiéis dos relatos de Lília Ferreira, Saulo Costa, Gabriel Arcanjo e Rosario Falcao.
+- O favicon fornecido pela organização foi aplicado e o bloco de diferenciais foi reorganizado para não deixar um cartão isolado.
