@@ -278,6 +278,72 @@ body > header {
   color: var(--pink);
   display: block;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+.community {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  background: var(--navy);
+  color: #fff;
+}
+.community-hours,
+.community-reviews {
+  padding: clamp(4rem, 7vw, 7rem);
+}
+.community-hours {
+  background: var(--pink);
+}
+.community-hours h2 {
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  line-height: 0.95;
+}
+.community-hours span {
+  font-weight: 700;
+}
+.community-reviews header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.community-reviews header p {
+  color: var(--cyan);
+  font-weight: 700;
+}
+.community-reviews header a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.community-reviews blockquote {
+  margin: 0;
+  padding: 1.25rem 0;
+  border-top: 1px solid #ffffff4d;
+  font-size: 1.15rem;
+}
+.community-reviews blockquote:last-child {
+  border-bottom: 1px solid #ffffff4d;
+}
+.community-reviews cite {
+  display: block;
+  margin-top: 0.7rem;
+  color: var(--cyan);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 700;
+}
 .faq {
   padding: clamp(5rem, 8vw, 8rem) clamp(1.2rem, 16vw, 18rem);
   background: var(--ice);
@@ -346,7 +412,8 @@ summary:focus-visible {
   .services,
   .specialist,
   .care-principles,
-  .contact {
+  .contact,
+  .community {
     grid-template-columns: 1fr;
   }
   .hero-message {

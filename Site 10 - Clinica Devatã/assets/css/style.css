@@ -715,6 +715,18 @@ a:focus-visible {
   font-size: 0.92rem;
 }
 
+.testimonials__source {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-weight: 700;
+}
+
+.testimonials__source a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
 .testimonial-marquee {
   grid-column: 1 / -1;
   width: 100vw;
@@ -1274,6 +1286,10 @@ a:focus-visible {
 }
 
 @media (max-width: 640px) {
+  .testimonial-marquee {
+    width: 100%;
+    margin-left: 0;
+  }
   h1 {
     font-size: 2.35rem;
   }

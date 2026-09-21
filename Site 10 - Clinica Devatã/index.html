@@ -8,7 +8,6 @@
       name="description"
       content="Clínica Devatã em Videira, SC: fisioterapia para dor, Pilates terapêutico, osteopatia, auriculoterapia, isostretching e terapias integrativas."
     />
-    <link rel="canonical" href="./index.html" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#66277e" />
 
@@ -39,13 +38,20 @@
         ],
         "taxID": "41.083.405/0001-18",
         "priceRange": "$$",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "reviewCount": "50",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Rua Osvaldo Cruz, 201",
@@ -97,6 +103,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "O agendamento pode ser feito pelo WhatsApp +55 49 98869-2112."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais são os horários publicados?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O Google Business informa atendimento de segunda a quinta, das 8h às 20h, e sexta, das 8h às 18h. Sábado e domingo aparecem como fechados."
             }
           },
           {
@@ -383,34 +397,36 @@
             <span class="rating-panel__number">5,0</span>
             <span class="rating-panel__stars" aria-hidden="true">★★★★★</span>
             <strong>50 avaliações no Google</strong>
-            <p>Todos os registros visíveis no resumo aparecem como 5 estrelas.</p>
+            <p>Nota e volume consultados no Google Business em 21/09/2026.</p>
           </div>
+
+          <p class="testimonials__source"><a href="https://www.google.com/search?q=Cl%C3%ADnica+Devat%C3%A3+Videira" target="_blank" rel="noopener">Ver perfil e avaliações no Google</a></p>
 
           <div class="testimonial-marquee reveal" data-testimonial-carousel aria-label="Depoimentos do Google">
             <div class="testimonial-track">
               <article class="testimonial-card">
-                <p>Ambiente maravilhoso, profissionais super dedicadas e atendimento impecável. Me sinto muito bem cuidada em cada aula, virou um dos melhores momentos da minha rotina!</p>
-                <footer>Tamara Fátima Serafini</footer>
+                <p>Arejada, ambiente bom com espaço, profissionalismo, acolhedor!</p>
+                <footer>Vera Soares · Google</footer>
               </article>
               <article class="testimonial-card">
-                <p>Só tenho a agradecer, porque depois que comecei a praticar pilates, fazer esses exercícios, só me fizeram bem. Muitos "dodóis", deixaram de existir.</p>
-                <footer>Lourdes Rigo</footer>
+                <p>E no trabalho pessoal muito profissional, estão de parabéns!</p>
+                <footer>Fabio Woitko · Google</footer>
               </article>
               <article class="testimonial-card">
-                <p>Um espaço agradável e limpo, com equipamentos bons e profissionais muito qualificadas. No ambiente a gente cura as lesões e também cura a alma, com boas risadas.</p>
-                <footer>Flavia Santos</footer>
+                <p>Profissionais competentes, ambiente tranquilo e exercícios bem orientados.</p>
+                <footer>Sandra Rostirola · Google</footer>
               </article>
               <article class="testimonial-card" aria-hidden="true">
-                <p>Ambiente maravilhoso, profissionais super dedicadas e atendimento impecável. Me sinto muito bem cuidada em cada aula, virou um dos melhores momentos da minha rotina!</p>
-                <footer>Tamara Fátima Serafini</footer>
+                <p>Arejada, ambiente bom com espaço, profissionalismo, acolhedor!</p>
+                <footer>Vera Soares · Google</footer>
               </article>
               <article class="testimonial-card" aria-hidden="true">
-                <p>Só tenho a agradecer, porque depois que comecei a praticar pilates, fazer esses exercícios, só me fizeram bem. Muitos "dodóis", deixaram de existir.</p>
-                <footer>Lourdes Rigo</footer>
+                <p>E no trabalho pessoal muito profissional, estão de parabéns!</p>
+                <footer>Fabio Woitko · Google</footer>
               </article>
               <article class="testimonial-card" aria-hidden="true">
-                <p>Um espaço agradável e limpo, com equipamentos bons e profissionais muito qualificadas. No ambiente a gente cura as lesões e também cura a alma, com boas risadas.</p>
-                <footer>Flavia Santos</footer>
+                <p>Profissionais competentes, ambiente tranquilo e exercícios bem orientados.</p>
+                <footer>Sandra Rostirola · Google</footer>
               </article>
             </div>
           </div>
@@ -443,6 +459,10 @@
               <div class="faq-answer"><div><p>O contato principal é pelo WhatsApp +55 49 98869-2112 ou pelo Instagram @clinica.devata.</p></div></div>
             </details>
             <details class="faq-item">
+              <summary>Quais são os horários publicados?</summary>
+              <div class="faq-answer"><div><p>Segunda a quinta, das 8h às 20h; sexta, das 8h às 18h. Sábado e domingo aparecem como fechados no Google Business.</p></div></div>
+            </details>
+            <details class="faq-item">
               <summary>A Clínica Devatã tem cadastro público em saúde?</summary>
               <div class="faq-answer"><div><p>Sim. A clínica aparece no CNES com o código 4877098, em Videira, Santa Catarina.</p></div></div>
             </details>
@@ -473,12 +493,15 @@
 
               <dt>Instagram</dt>
               <dd><a href="https://www.instagram.com/clinica.devata/" target="_blank" rel="noopener">@clinica.devata</a></dd>
+
+              <dt>Horários</dt>
+              <dd>Segunda a quinta, 8h–20h · sexta, 8h–18h</dd>
             </dl>
 
             <div class="contact-highlights" aria-label="Resumo do contato da Clínica Devatã">
               <span>Centro de Videira</span>
               <span>5,0 no Google</span>
-              <span>Entrada acessível</span>
+              <span>Seg–qui · 8h–20h</span>
             </div>
 
             <div class="contact-actions">
