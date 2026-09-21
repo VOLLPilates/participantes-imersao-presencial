@@ -24,4 +24,6 @@ Revisão realizada em 21 de setembro de 2026.
 - Horários antigos do CNES não foram usados.
 - Avaliações aparecem apenas no conteúdo visível, sem marcação `Review` ou `AggregateRating`.
 - A fotografia é representativa e não registra as instalações.
+- O logotipo e o favicon fornecidos pela organização foram aplicados em 21/09/2026.
+- A identidade visual foi refeita a partir do vinho e do magenta presentes na marca, sem alterar modalidades, horários, contato ou atribuição das avaliações.
 

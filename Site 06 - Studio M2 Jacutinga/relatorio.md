@@ -23,4 +23,6 @@ Revisão realizada em 21 de setembro de 2026.
 - “13 anos” continua fora da página por não ter sido confirmado em fonte oficial.
 - Avaliações aparecem somente no conteúdo visível, sem dados estruturados de avaliação.
 - A imagem do hero é representativa e não registra a instalação real.
+- O logotipo e o favicon fornecidos pela organização foram aplicados em 21/09/2026.
+- A identidade visual foi refeita em preto, roxo e lavanda a partir da marca; a fotografia continua identificada como representativa.
 

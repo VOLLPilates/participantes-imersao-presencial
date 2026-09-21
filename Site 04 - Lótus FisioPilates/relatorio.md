@@ -23,4 +23,6 @@ Revisão realizada em 21 de setembro de 2026.
 - A planilha informa um telefone incompleto, +55 47 9644-9209. O site oficial e o Google Business concordam em +55 47 99289-7343.
 - Os depoimentos são atribuídos ao canal oficial e permanecem fora do JSON-LD.
 - A fotografia é representativa e não documenta a unidade real.
+- O logotipo e o favicon fornecidos pela organização foram aplicados em 21/09/2026.
+- A página passou a usar verde-petróleo e turquesa derivados da marca e separa Pilates e fisioterapia em faixas institucionais próprias.
 

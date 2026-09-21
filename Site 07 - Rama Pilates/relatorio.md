@@ -24,4 +24,7 @@ Revisão realizada em 21 de setembro de 2026.
 - O Google mostra sala 2; a planilha informa salas 2 e 4. O endereço completo recebido da participante foi preservado e a divergência fica registrada.
 - Avaliações permanecem fora do JSON-LD.
 - A fotografia é representativa e não documenta a instalação ou a profissional.
+- O logotipo e o favicon fornecidos pela organização foram aplicados em 21/09/2026.
+- A imagem anterior foi substituída por uma nova fotografia representativa, criada para composição panorâmica e sem identificação de pessoas reais.
+- A página foi reorganizada em torno da jornada avaliação, plano, acompanhamento e evolução, sem ampliar as credenciais de Priscila Castro.
 

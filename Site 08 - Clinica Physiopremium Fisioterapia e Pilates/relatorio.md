@@ -27,4 +27,6 @@ Revisão realizada em 21 de setembro de 2026.
 - O Google Business apresenta uma grade dividida diferente. A página usa a grade atual da Wellhub, com atribuição e orientação para confirmação.
 - A nota da Wellhub e os depoimentos do Google permanecem fora do JSON-LD.
 - A fotografia é representativa e não documenta a instalação real.
+- O logotipo e o favicon fornecidos pela organização foram aplicados em 21/09/2026.
+- O hero foi convertido para uma composição panorâmica contínua, mantendo modalidades, horários, reconhecimentos e atribuições já validados.
 
