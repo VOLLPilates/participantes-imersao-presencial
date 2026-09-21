@@ -10,14 +10,12 @@
     <meta name="keywords" content="pilates, fisioterapia, João Pessoa, Portal do Sol, MetaLife, reabilitação, bem-estar, A2 Studio" />
     <meta name="author" content="A2 Studio Pilates e Fisioterapia" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://a2studiopilates.com.br/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="A2 Studio Pilates e Fisioterapia | João Pessoa - PB" />
     <meta property="og:description" content="Pilates e fisioterapia com atendimento personalizado em João Pessoa - PB. Agende sua aula pelo WhatsApp." />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:url" content="https://a2studiopilates.com.br/" />
     <meta property="og:site_name" content="A2 Studio Pilates e Fisioterapia" />
 
     <!-- Twitter -->
@@ -51,11 +49,11 @@
         "addressCountry": "BR"
       },
       "telephone": "+5583988040359",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "ratingCount": "1"
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "07:00",
+        "closes": "20:00"
       },
       "sameAs": ["https://instagram.com/a2studiopilates"]
     }
@@ -134,7 +132,7 @@
       <!-- Hero -->
       <section id="inicio" class="hero">
         <div class="hero-bg">
-          <img src="https://images.pexels.com/photos/11036671/pexels-photo-11036671.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Estúdio de pilates com aparelhos reformer e janelas grandes com luz natural" loading="eager" />
+          <img src="./assets/img/hero-pilates.jpg" width="1600" height="1067" alt="Estúdio de pilates com aparelhos reformer e janelas grandes com luz natural" loading="eager" fetchpriority="high" />
           <div class="hero-overlay"></div>
         </div>
         <div class="container hero-content">
@@ -172,7 +170,7 @@
               </ul>
             </div>
             <div class="section-image reveal">
-              <img src="https://images.pexels.com/photos/25599829/pexels-photo-25599829.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Estúdio de pilates amplo e iluminado com aparelhos de madeira" loading="lazy" />
+              <img src="./assets/img/studio-pilates.jpg" width="900" height="600" alt="Estúdio de pilates amplo e iluminado com aparelhos de madeira" loading="lazy" />
               <div class="image-accent accent-turquoise"></div>
             </div>
           </div>
@@ -201,7 +199,7 @@
                 <li>Sessões personalizadas</li>
                 <li>Foco em postura e mobilidade</li>
               </ul>
-              <img src="https://images.pexels.com/photos/33360042/pexels-photo-33360042.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mulher praticando pilates em reformer" loading="lazy" class="card-image" />
+              <img src="./assets/img/pilates-reformer.jpg" width="600" height="900" alt="Mulher praticando pilates em reformer" loading="lazy" class="card-image" />
             </article>
 
             <article class="service-card reveal">
@@ -218,7 +216,7 @@
                 <li>Reabilitação e prevenção</li>
                 <li>Plano de tratamento personalizado</li>
               </ul>
-              <img src="https://images.pexels.com/photos/5793695/pexels-photo-5793695.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sessão de fisioterapia em clínica clara e moderna" loading="lazy" class="card-image" />
+              <img src="./assets/img/fisioterapia.jpg" width="600" height="400" alt="Sessão de fisioterapia em clínica clara e moderna" loading="lazy" class="card-image" />
             </article>
           </div>
         </div>
@@ -296,22 +294,23 @@
             <div class="google-badge-info">
               <span class="google-rating">5,0</span>
               <div class="rating-stars large">★★★★★</div>
-              <span class="google-label">Estúdio verificado no Google Business</span>
+              <span class="google-label">77 avaliações no Google · consulta em 21/09/2026</span>
             </div>
           </div>
 
           <div class="depoimentos-grid">
-            <div class="depoimento-placeholder reveal">
+            <article class="depoimento-placeholder reveal">
               <div class="quote-icon">"</div>
-              <p class="depoimento-text">Em breve, depoimentos reais de nossos alunos serão exibidos aqui.</p>
-              <p class="depoimento-author">— A2 Studio Pilates e Fisioterapia</p>
-            </div>
-            <div class="depoimento-placeholder reveal">
+              <p class="depoimento-text">Minha experiência foi incrível! Professora super atenciosa e paciente em passar os exercícios, de forma correta. Estúdio novo, tudo organizado, limpo e cheiroso! Equipamentos ótimos!</p>
+              <p class="depoimento-author">Mariana Sá · avaliação no Google</p>
+            </article>
+            <article class="depoimento-placeholder reveal">
               <div class="quote-icon">"</div>
-              <p class="depoimento-text">Se você é aluno do estúdio e gostaria de compartilhar sua experiência, deixe sua avaliação no Google.</p>
-              <a href="https://www.google.com/search?q=A2+Studio+Pilates+e+Fisioterapia+Joao+Pessoa" target="_blank" rel="noopener" class="depoimento-link">Avaliar no Google →</a>
-            </div>
+              <p class="depoimento-text">Um estúdio de Pilates que realmente se preocupa com o aluno. Acompanhamento cuidadoso, aulas bem planejadas e um ambiente que dá vontade de voltar sempre.</p>
+              <p class="depoimento-author">Silvana Mendes · avaliação no Google</p>
+            </article>
           </div>
+          <p class="avaliacoes-source reveal"><a href="https://www.google.com/search?q=A2+Studio+Pilates+e+Fisioterapia+Joao+Pessoa" target="_blank" rel="noopener">Ver perfil e avaliações no Google →</a></p>
         </div>
       </section>
 
@@ -361,7 +360,7 @@
                 </div>
                 <div>
                   <h3>Horário de funcionamento</h3>
-                  <p>Atendimento por agendamento<br><em>A confirmar com o estúdio</em></p>
+                  <p>Segunda a quinta, das 7h às 20h<br><em>Sexta, sábado e domingo: fechado</em></p>
                 </div>
               </div>
 

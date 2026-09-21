@@ -1,22 +1,26 @@
 # Lótus FisioPilates — Unidade Anita Garibaldi
 
-Revisão realizada em 17 de setembro de 2026.
+Revisão realizada em 21 de setembro de 2026.
 
 ## Dados publicados
 
-- Unidade: Rua Anita Garibaldi, 293, Joinville/SC.
-- WhatsApp: +55 47 99289-7343.
-- Serviços confirmados: Pilates e fisioterapia.
-- Conteúdo institucional: atendimento individualizado, reabilitação, prevenção, consciência corporal e qualidade de vida.
-- Os depoimentos exibidos foram publicados no site oficial da Lótus.
+- Endereço: Rua Anita Garibaldi, 293, Joinville/SC.
+- Telefone e WhatsApp comercial: +55 47 99289-7343.
+- Serviços: Pilates e fisioterapia.
+- Instagram oficial: https://www.instagram.com/lotusfisiopilatesjlle/
+- Horários do Google Business: segunda a sexta, 6h–21h; sábado e domingo fechados.
+- Depoimentos de Renita Beckert e Altair Sgrott Junior, publicados no site oficial da Lótus.
 
 ## Fontes
 
 - Unidades oficiais: https://lotuspilatesjlle.com.br/unidades-lotus-pilates-joinville/
-- Identidade e proposta da marca: https://lotuspilatesjlle.com.br/lotus-pilates-joinville/
-- Conteúdo sobre Pilates: https://lotuspilatesjlle.com.br/tudo-sobre-pilates/
+- Site oficial e depoimentos: https://lotuspilatesjlle.com.br/
+- Conteúdo institucional: https://lotuspilatesjlle.com.br/lotus-pilates-joinville/
+- Google Business: https://www.google.com/search?q=L%C3%B3tus+Pilates+Anita+Garibaldi+293+Joinville — horário e vínculo com o Instagram.
 
-## Direção visual
+## Divergências e decisões
 
-A fotografia é representativa e gerada para a direção de arte; não documenta a unidade real.
+- A planilha informa um telefone incompleto, +55 47 9644-9209. O site oficial e o Google Business concordam em +55 47 99289-7343.
+- Os depoimentos são atribuídos ao canal oficial e permanecem fora do JSON-LD.
+- A fotografia é representativa e não documenta a unidade real.
 

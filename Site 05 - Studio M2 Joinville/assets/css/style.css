@@ -3,6 +3,19 @@
   src: url("../fonts/manrope-400.woff2") format("woff2");
   font-display: swap;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
 @font-face {
   font-family: Manrope;
   src: url("../fonts/manrope-700.woff2") format("woff2");

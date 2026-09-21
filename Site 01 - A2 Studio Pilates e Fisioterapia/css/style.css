@@ -801,6 +801,13 @@ p { color: var(--gray-600); }
   font-weight: 500;
 }
 
+.avaliacoes-source {
+  margin-top: var(--space-md);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 /* ---- Localização ---- */
 .section-localizacao {
   background: var(--off-white);
