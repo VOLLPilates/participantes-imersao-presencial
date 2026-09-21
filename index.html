@@ -1,283 +1,352 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Participantes Imersão Presencial</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: oklch(0.105 0.018 255);
-      --bg-deep: oklch(0.075 0.006 255);
-      --surface: oklch(0.972 0.004 255);
-      --surface-raised: oklch(1 0 0);
-      --ink: oklch(0.18 0.026 255);
-      --ink-on-dark: oklch(0.985 0.002 255);
-      --muted: oklch(0.72 0.02 255);
-      --muted-dark: oklch(0.36 0.028 255);
-      --line: oklch(0.89 0.012 255);
-      --primary: oklch(0.568 0.149 45.9);
-      --primary-soft: oklch(0.91 0.054 45.9);
-      --accent: oklch(0.49 0.14 255);
-      --accent-soft: oklch(0.935 0.026 255);
-      --focus: oklch(0.62 0.18 45.9);
-      --radius: 16px;
-      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-    }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Galeria de projetos digitais desenvolvidos para a Imersão Presencial."
+    />
+    <meta name="theme-color" content="#11100f" />
+    <title>Imersão Presencial | Galeria de Projetos</title>
+    <link
+      rel="preload"
+      href="assets/home/fonts/onest-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/home/styles.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#projetos">Ir para os projetos</a>
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Segoe UI Variable", "Segoe UI", Arial, Helvetica, sans-serif;
-      color: var(--ink-on-dark);
-      background:
-        linear-gradient(135deg, oklch(0.145 0.058 255) 0, transparent 42%),
-        linear-gradient(315deg, oklch(0.16 0.07 45.9) 0, transparent 38%),
-        linear-gradient(180deg, var(--bg) 0, var(--bg-deep) 100%),
-        var(--bg);
-    }
-
-    main {
-      width: min(1340px, calc(100% - 48px));
-      margin: 0 auto;
-      padding: 38px 0;
-    }
-
-    header {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 24px;
-      align-items: center;
-      margin-bottom: 24px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid oklch(1 0 0 / 0.18);
-    }
-
-    h1 {
-      margin: 0 0 8px;
-      max-width: 900px;
-      font-size: 3.65rem;
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 0.98;
-      font-weight: 700;
-      letter-spacing: 0;
-      text-wrap: balance;
-    }
-
-    p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.08rem;
-      line-height: 1.5;
-      text-wrap: pretty;
-    }
-
-    .meta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 88px;
-      min-height: 44px;
-      padding: 0 16px;
-      color: var(--ink-on-dark);
-      background: oklch(1 0 0 / 0.1);
-      border: 1px solid oklch(1 0 0 / 0.18);
-      border-radius: 999px;
-      font-size: 0.9rem;
-      font-weight: 760;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      position: relative;
-      display: flex;
-      min-height: 168px;
-      flex-direction: column;
-      justify-content: space-between;
-      isolation: isolate;
-      overflow: hidden;
-      padding: 18px;
-      color: var(--ink);
-      text-decoration: none;
-      background: var(--surface-raised);
-      border: 0;
-      border-radius: var(--radius);
-      box-shadow: 0 8px 8px oklch(0 0 0 / 0.08);
-      transition:
-        transform 180ms var(--ease-out),
-        background-color 180ms var(--ease-out),
-        box-shadow 180ms var(--ease-out);
-    }
-
-    .card::before {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      background:
-        linear-gradient(145deg, var(--primary-soft) 0, transparent 46%),
-        linear-gradient(325deg, var(--accent-soft) 0, transparent 56%);
-      opacity: 0.72;
-      transition: opacity 180ms var(--ease-out);
-      content: "";
-    }
-
-    .card:hover,
-    .card:focus-visible {
-      transform: translateY(-4px);
-      box-shadow:
-        0 8px 8px oklch(0 0 0 / 0.1),
-        0 0 0 3px color-mix(in oklch, var(--focus) 52%, transparent);
-      outline: none;
-    }
-
-    .card:hover::before,
-    .card:focus-visible::before {
-      opacity: 1;
-    }
-
-    .card:active {
-      transform: translateY(-1px);
-    }
-
-    .site-number {
-      width: fit-content;
-      padding: 8px 11px;
-      color: oklch(1 0 0);
-      background: var(--primary);
-      border-radius: 999px;
-      font-size: 0.84rem;
-      font-weight: 800;
-      line-height: 1.2;
-    }
-
-    .studio-name {
-      margin-top: 30px;
-      color: var(--ink);
-      font-size: 1.06rem;
-      font-weight: 780;
-      line-height: 1.22;
-      overflow-wrap: anywhere;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .card,
-      .card::before {
-        transition: none;
-      }
-
-      .card:hover,
-      .card:focus-visible,
-      .card:active {
-        transform: none;
-      }
-    }
-
-    @media (max-width: 1180px) {
-      .grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 760px) {
-      header {
-        grid-template-columns: 1fr;
-        gap: 18px;
-        align-items: start;
-      }
-
-      h1 {
-        font-size: 2.85rem;
-      }
-
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 560px) {
-      main {
-        width: min(100% - 28px, 1340px);
-        padding: 34px 0;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .card {
-        min-height: 132px;
-        padding: 18px;
-        border-radius: 12px;
-      }
-
-      h1 {
-        font-size: 2.25rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <header>
-      <div>
-        <h1>Participantes Imersão Presencial</h1>
-        <p>Selecione um studio para abrir seu diretório.</p>
-      </div>
-      <span class="meta" aria-label="Total de sites">10 sites</span>
+    <header class="topbar">
+      <a class="wordmark" href="#topo" aria-label="Imersão Presencial, início">
+        <span class="wordmark__symbol" aria-hidden="true">IP</span>
+        <span>Imersão Presencial</span>
+      </a>
+      <p class="topbar__count"><strong>10</strong> projetos digitais</p>
     </header>
 
-    <section class="grid" aria-label="Studios internos">
-      <a class="card" href="Site%201%20-%20A2%20Studio%20Pilates%20e%20Fisioterapia/">
-        <span class="site-number">Site 1</span>
-        <span class="studio-name">A2 Studio Pilates e Fisioterapia</span>
-      </a>
-      <a class="card" href="Site%202%20-%20%20Centro%20de%20Sa%C3%BAde%20Cyntia%20Rosa/">
-        <span class="site-number">Site 2</span>
-        <span class="studio-name">Centro de Saúde Cyntia Rosa</span>
-      </a>
-      <a class="card" href="Site%203%20-%20Espa%C3%A7o%20Sa%C3%BAde%20Jessica%20Drey/">
-        <span class="site-number">Site 3</span>
-        <span class="studio-name">Espaço Saúde Jessica Drey</span>
-      </a>
-      <a class="card" href="Site%204%20-%20L%C3%B3tus%20FisioPilates/">
-        <span class="site-number">Site 4</span>
-        <span class="studio-name">Lótus FisioPilates</span>
-      </a>
-      <a class="card" href="Site%205%20-%20Studio%20M2%20Joinville/">
-        <span class="site-number">Site 5</span>
-        <span class="studio-name">Studio M2 Joinville</span>
-      </a>
-      <a class="card" href="Site%206%20-%20Studio%20M2%20Jacutinga/">
-        <span class="site-number">Site 6</span>
-        <span class="studio-name">Studio M2 Jacutinga</span>
-      </a>
-      <a class="card" href="Site%207%20-%20Rama%20Pilates/">
-        <span class="site-number">Site 7</span>
-        <span class="studio-name">Rama Pilates</span>
-      </a>
-      <a class="card" href="Site%208%20-%20Clinica%20Physiopremium%20Fisioterapia%20e%20Pilates/">
-        <span class="site-number">Site 8</span>
-        <span class="studio-name">Clinica Physiopremium Fisioterapia e Pilates</span>
-      </a>
-      <a class="card" href="Site%209%20-%20Voll%20Pilates%20Studio%20S%C3%A3o%20Lu%C3%ADs%20Parque%20Shalon/">
-        <span class="site-number">Site 9</span>
-        <span class="studio-name">Voll Pilates Studio São Luís Parque Shalon</span>
-      </a>
-      <a class="card" href="Site%2010%20-%20Clinica%20Devat%C3%A3/">
-        <span class="site-number">Site 10</span>
-        <span class="studio-name">Clinica Devatã</span>
-      </a>
-    </section>
-  </main>
-</body>
+    <main id="topo">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <p class="hero__edition">Galeria digital</p>
+          <h1 id="hero-title">Imersão<br />Presencial</h1>
+          <p class="hero__lead">
+            Uma seleção de experiências digitais criadas para marcas que
+            transformam movimento em cuidado.
+          </p>
+          <a class="hero__link" href="#projetos"
+            >Explorar projetos <span aria-hidden="true">↓</span></a
+          >
+        </div>
+        <div class="hero__signal" aria-hidden="true">
+          <span>IP</span>
+          <p>Movimento<br />Presença<br />Transformação</p>
+        </div>
+      </section>
+
+      <section class="showcase" id="projetos" aria-labelledby="showcase-title">
+        <div class="showcase__intro">
+          <div>
+            <p class="showcase__index">Projetos 01–10</p>
+            <h2 id="showcase-title">Projetos apresentados</h2>
+          </div>
+          <p>
+            Dez identidades, dez contextos e uma mesma intenção: traduzir
+            cuidado e autoridade em experiências digitais próprias.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <a
+            class="project"
+            href="Site%2001%20-%20A2%20Studio%20Pilates%20e%20Fisioterapia/"
+            style="--project-accent: #1d9e75"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-01.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do site A2 Studio Pilates e Fisioterapia"
+                loading="eager"
+              />
+              <span class="project__number">01</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>João Pessoa · PB</p>
+                <h3>A2 Studio Pilates e Fisioterapia</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2002%20-%20%20Centro%20de%20Sa%C3%BAde%20Cyntia%20Rosa/"
+            style="--project-accent: #ee5c7c"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-02.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do projeto Centro de Saúde Cyntia Rosa"
+                loading="eager"
+              />
+              <span class="project__number">02</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>Rio de Janeiro · RJ</p>
+                <h3>Centro de Saúde Cyntia Rosa</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2003%20-%20Espa%C3%A7o%20Sa%C3%BAde%20Jessica%20Drey/"
+            style="--project-accent: #4f6df5"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-03.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do projeto Espaço Saúde Jéssica Drey"
+                loading="lazy"
+              />
+              <span class="project__number">03</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>Belo Horizonte · MG</p>
+                <h3>Espaço Saúde Jéssica Drey</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2004%20-%20L%C3%B3tus%20FisioPilates/"
+            style="--project-accent: #a6ca35"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-04.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do projeto Lótus FisioPilates"
+                loading="lazy"
+              />
+              <span class="project__number">04</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>Joinville · SC</p>
+                <h3>Lótus FisioPilates</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2005%20-%20Studio%20M2%20Joinville/"
+            style="--project-accent: #ce3bf2"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-05.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do projeto Lótus Pilates Unidade Vila Nova"
+                loading="lazy"
+              />
+              <span class="project__number">05</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>Joinville · SC</p>
+                <h3>Lótus Pilates · Vila Nova</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2006%20-%20Studio%20M2%20Jacutinga/"
+            style="--project-accent: #ff4bc8"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-06.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do site Studio M2 Jacutinga"
+                loading="lazy"
+              />
+              <span class="project__number">06</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>Jacutinga · MG</p>
+                <h3>Studio M2 Jacutinga</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2007%20-%20Rama%20Pilates/"
+            style="--project-accent: #eb2a91"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-07.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do site Rama Pilates"
+                loading="lazy"
+              />
+              <span class="project__number">07</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>Uberlândia · MG</p>
+                <h3>Rama Pilates</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2008%20-%20Clinica%20Physiopremium%20Fisioterapia%20e%20Pilates/"
+            style="--project-accent: #1fb9ac"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-08.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do site Clínica Physiopremium"
+                loading="lazy"
+              />
+              <span class="project__number">08</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>Ribeirão Preto · SP</p>
+                <h3>Clínica Physiopremium</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2009%20-%20Voll%20Pilates%20Studio%20S%C3%A3o%20Lu%C3%ADs%20Parque%20Shalon/"
+            style="--project-accent: #ee2b39"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-09.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do site VOLL Pilates Studio São Luís"
+                loading="lazy"
+              />
+              <span class="project__number">09</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>São Luís · MA</p>
+                <h3>VOLL Pilates Studio Parque Shalon</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+
+          <a
+            class="project"
+            href="Site%2010%20-%20Clinica%20Devat%C3%A3/"
+            style="--project-accent: #8e724e"
+          >
+            <figure class="project__media">
+              <img
+                src="assets/home/previews/site-10.jpg"
+                width="1280"
+                height="800"
+                alt="Prévia do site Clínica Devatã"
+                loading="lazy"
+              />
+              <span class="project__number">10</span>
+              <span class="project__status">Projeto completo</span>
+            </figure>
+            <div class="project__body">
+              <div>
+                <p>Videira · SC</p>
+                <h3>Clínica Devatã</h3>
+              </div>
+              <span class="project__action"
+                >Abrir projeto <span aria-hidden="true">↗</span></span
+              >
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="wordmark wordmark--footer" href="#topo"
+        ><span class="wordmark__symbol" aria-hidden="true">IP</span
+        ><span>Imersão Presencial</span></a
+      >
+      <p>Experiências digitais para marcas que cuidam do movimento.</p>
+      <a class="footer__top" href="#topo"
+        >Voltar ao início <span aria-hidden="true">↑</span></a
+      >
+    </footer>
+    <script src="assets/home/script.js"></script>
+  </body>
 </html>

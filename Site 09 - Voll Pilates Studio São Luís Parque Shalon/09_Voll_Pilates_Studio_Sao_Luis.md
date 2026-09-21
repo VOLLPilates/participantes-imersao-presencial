@@ -1,5 +1,7 @@
 # Relatório de Identificação Digital - Voll Pilates Studio (São Luís - Parque Shalon)
 
+> Documento de briefing original. Para a auditoria atualizada, fontes verificadas e decisões de publicação, consulte `relatorio.md` neste diretório.
+
 ## O Studio possui um site? (em domínio próprio)
 Se sim: analise a estrutura e SEO, e crie um relatorio.md com cada ponto que poderia ser melhorado;
 Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. Busque no instagram Logo e cores mais utilizadas em publicações com imagens.
@@ -32,7 +34,7 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 
 ## 🌐 Links Directos e Presença Digital
 * 📍 **Link do Studio no Google Business / Google Maps:** [Voll Pilates Studio - São Luis - MA](https://www.google.com/maps/search/?api=1&query=Voll%20Pilates%20Studio%20Avenida%20da%20Paz%2015%20Parque%20Shalon%20Sao%20Luis%20MA)
-* 📸 **Instagram Oficial:** Integração via franqueadora VOLL Pilates
+* 📸 **Instagram Oficial:** [Integração via franqueadora VOLL Pilates](https://www.instagram.com/vollstudiosaoluis/)
 * 🌐 **Website Oficial:** https://telu.app/ranking/br/fitness/pilates/sao-luis/parque-shalon/voll-pilates-studio-sao-luis-ma
 
 ### 🔗 Outras Páginas Encontradas na Internet:

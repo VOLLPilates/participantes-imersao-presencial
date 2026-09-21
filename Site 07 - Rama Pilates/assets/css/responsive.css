@@ -1,0 +1,20 @@
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+  .brand + nav,
+  .head-cta {
+    display: none;
+  }
+  .hero-message > *,
+  .services > *,
+  .specialist > *,
+  .reviews > *,
+  .contact > * {
+    min-width: 0;
+  }
+  h1,
+  h2 {
+    overflow-wrap: anywhere;
+  }
+}
