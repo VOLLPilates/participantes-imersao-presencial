@@ -105,3 +105,76 @@
     grid-column:auto;
   }
 }
+
+/* LP column pass: closer to Sites 01/10, with a vertical sales narrative. */
+.hero{
+  min-height:calc(100svh - 86px);
+  display:flex;
+  align-items:center;
+  background:var(--plum);
+}
+.hero-media{
+  position:absolute;
+  inset:0;
+  grid-column:auto;
+  min-height:0;
+}
+.hero-shade{
+  display:block;
+  background:linear-gradient(90deg,rgba(41,7,31,.92) 0%,rgba(41,7,31,.72) 42%,rgba(41,7,31,.24) 78%),linear-gradient(0deg,rgba(41,7,31,.7),transparent 55%);
+}
+.hero-copy{
+  position:relative;
+  z-index:2;
+  width:min(880px,92%);
+  display:block;
+  background:transparent;
+  padding:clamp(4rem,9vw,8rem) max(6vw,32px);
+}
+.hero h1{
+  max-width:10.5ch;
+}
+.modalities{
+  padding-top:clamp(5rem,8vw,7rem);
+}
+.section-intro{
+  grid-template-columns:1fr;
+  max-width:780px;
+  gap:1rem;
+  margin-inline:auto;
+  text-align:center;
+}
+.section-intro h2{
+  margin-inline:auto;
+}
+.section-intro>p:last-child{
+  margin-inline:auto;
+}
+.modality-index{
+  max-width:980px;
+  margin:4rem auto 0;
+}
+.modality-index article{
+  grid-template-columns:9rem 1fr;
+  gap:1.5rem;
+}
+.modality-index article p{
+  grid-column:2;
+}
+@media(max-width:900px){
+  .hero{
+    min-height:calc(100svh - 76px);
+  }
+  .hero-media{
+    position:absolute;
+    min-height:0;
+  }
+}
+@media(max-width:560px){
+  .hero{
+    min-height:calc(100svh - 76px);
+  }
+  .hero-copy{
+    padding:3.5rem 22px;
+  }
+}

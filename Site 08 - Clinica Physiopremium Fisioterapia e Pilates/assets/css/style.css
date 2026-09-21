@@ -804,3 +804,81 @@ summary:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* LP column pass: more like a classic landing page, less horizontal concept split. */
+.hero {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto minmax(360px, 46svh);
+  background: #f7fbfb;
+}
+.hero-copy {
+  width: min(980px, 100%);
+  display: block;
+  padding: clamp(4rem, 7vw, 6rem) max(6vw, 32px) clamp(2rem, 4vw, 3rem);
+}
+.hero h1 {
+  max-width: 12ch;
+}
+.hero-copy > span {
+  max-width: 58ch;
+}
+.hero-visual {
+  min-height: 0;
+  padding: 0 max(6vw, 32px) clamp(2rem, 4vw, 3rem);
+}
+.hero-visual img {
+  object-position: center 45%;
+}
+.award {
+  left: max(8vw, 48px);
+  bottom: clamp(2rem, 4vw, 3rem);
+  width: min(22rem, 44%);
+}
+.credibility {
+  grid-template-columns: repeat(3, 1fr) auto;
+}
+.modalities .section-head {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+}
+.modalities .section-head h2 {
+  margin-inline: auto;
+}
+@media (max-width: 900px) {
+  .hero {
+    grid-template-rows: auto minmax(320px, 38svh);
+  }
+  .hero-visual {
+    padding-inline: 1.4rem;
+  }
+  .award {
+    left: 2rem;
+    width: min(19rem, calc(100% - 4rem));
+  }
+  .credibility {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .hero {
+    grid-template-rows: auto minmax(280px, 34svh);
+  }
+  .hero-copy {
+    padding: 3rem 1.4rem 1.5rem;
+  }
+  .hero-visual {
+    padding-bottom: 1.4rem;
+  }
+  .award {
+    left: 2rem;
+    right: 2rem;
+    width: auto;
+  }
+  .credibility {
+    grid-template-columns: 1fr;
+  }
+}

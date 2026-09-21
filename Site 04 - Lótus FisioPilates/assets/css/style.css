@@ -84,3 +84,58 @@
     font-size:clamp(2.6rem,12vw,3.7rem);
   }
 }
+
+/* LP column pass: image-led hero and stacked institutional rhythm. */
+.hero{
+  height:min(780px,calc(100svh - 88px));
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  background:var(--deep);
+}
+.hero picture{
+  position:absolute;
+  inset:0;
+  grid-row:auto;
+}
+.hero-overlay{
+  display:block;
+  background:linear-gradient(90deg,rgba(6,63,62,.92) 0%,rgba(6,63,62,.68) 48%,rgba(6,63,62,.14) 78%),linear-gradient(0deg,rgba(6,63,62,.58),transparent 58%);
+}
+.hero-copy{
+  position:relative;
+  z-index:2;
+  width:min(980px,92%);
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.4rem;
+  padding:clamp(4rem,8vw,7rem) max(6vw,32px);
+  color:#fff;
+}
+.hero-copy p{
+  color:#d7fffa;
+}
+.hero h1{
+  max-width:12ch;
+}
+.hero .button.light{
+  justify-self:start;
+  background:#fff;
+  color:var(--deep);
+}
+.care{
+  grid-template-columns:1fr;
+  max-width:1080px;
+  margin:auto;
+  gap:2rem;
+}
+.care>div:last-child{
+  max-width:70ch;
+}
+@media(max-width:560px){
+  .hero{
+    height:calc(100svh - 76px);
+    min-height:600px;
+  }
+}

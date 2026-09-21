@@ -102,3 +102,74 @@
     font-size:clamp(2.4rem,11vw,3.45rem);
   }
 }
+
+/* LP column pass: full campaign hero and vertical conversion flow. */
+.hero{
+  height:min(790px,calc(100svh - 92px));
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  padding:0;
+  background:var(--black);
+}
+.hero picture{
+  position:absolute;
+  inset:0;
+  grid-column:auto;
+  min-height:0;
+  border:0;
+}
+.hero picture img{
+  object-position:66% center;
+}
+.hero-shade{
+  display:block;
+  background:linear-gradient(90deg,rgba(9,7,13,.96) 0%,rgba(9,7,13,.78) 44%,rgba(75,10,133,.22) 78%),linear-gradient(0deg,rgba(9,7,13,.64),transparent 58%);
+}
+.hero-copy{
+  position:relative;
+  z-index:2;
+  width:min(850px,92%);
+  padding:clamp(4rem,8vw,7rem) max(6vw,32px);
+}
+.hero h1{
+  max-width:12ch;
+}
+.modalities header{
+  grid-template-columns:1fr;
+  max-width:760px;
+  margin-inline:auto;
+  text-align:center;
+}
+.modalities h2{
+  margin-inline:auto;
+}
+.modalities article{
+  max-width:980px;
+  margin-inline:auto;
+  grid-template-columns:1fr auto;
+}
+.modalities article>p{
+  max-width:60ch;
+}
+@media(max-width:980px){
+  .hero{
+    height:calc(100svh - 92px);
+    min-height:620px;
+  }
+  .hero picture{
+    position:absolute;
+  }
+}
+@media(max-width:600px){
+  .hero{
+    height:calc(100svh - 78px);
+    min-height:620px;
+  }
+  .hero-copy{
+    padding:3rem 22px;
+  }
+  .modalities article{
+    grid-template-columns:1fr;
+  }
+}

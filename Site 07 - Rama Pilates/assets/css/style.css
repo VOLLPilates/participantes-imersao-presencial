@@ -113,3 +113,75 @@
     bottom:14px;
   }
 }
+
+/* LP column pass: Site 01 style hero with a clearer vertical journey below. */
+.hero{
+  height:min(790px,calc(100svh - 88px));
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  background:var(--deep);
+}
+.hero picture{
+  position:absolute;
+  inset:0;
+  grid-column:auto;
+  grid-row:auto;
+}
+.hero picture img{
+  object-position:66% center;
+}
+.hero-overlay{
+  display:block;
+  background:linear-gradient(90deg,rgba(3,37,80,.95) 0%,rgba(3,37,80,.74) 45%,rgba(3,37,80,.18) 78%),linear-gradient(0deg,rgba(3,37,80,.54),transparent 58%);
+}
+.hero-copy{
+  position:relative;
+  z-index:2;
+  width:min(860px,92%);
+  display:block;
+  padding:clamp(4rem,8vw,7rem) max(6vw,32px);
+}
+.hero-copy>span{
+  display:block;
+  max-width:48ch;
+}
+.hero h1{
+  max-width:11.5ch;
+}
+.hero-caption{
+  color:var(--deep);
+}
+.journey header{
+  grid-template-columns:1fr;
+  max-width:760px;
+  text-align:center;
+  margin-inline:auto;
+}
+.journey h2{
+  margin-inline:auto;
+}
+.journey ol{
+  max-width:1040px;
+  margin-inline:auto;
+}
+@media(max-width:960px){
+  .hero{
+    height:calc(100svh - 88px);
+    min-height:620px;
+    grid-template-columns:none;
+    grid-template-rows:none;
+  }
+  .hero picture{
+    position:absolute;
+  }
+}
+@media(max-width:580px){
+  .hero{
+    height:calc(100svh - 76px);
+    min-height:620px;
+  }
+  .hero-copy{
+    padding:3rem 22px;
+  }
+}
