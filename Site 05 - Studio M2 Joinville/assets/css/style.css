@@ -418,3 +418,88 @@ a:focus-visible {
     margin-top: 2rem;
   }
 }
+
+/* Vertical layout pass: deeper scroll narrative, less dashboard-like width. */
+.progression {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.headline {
+  grid-template-columns: 1fr;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+.levels {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.levels article:nth-child(2n) {
+  border-right: 0;
+}
+.levels article:nth-child(n + 3) {
+  border-top: 1px solid #ffffff35;
+}
+.session {
+  grid-template-columns: 1fr;
+}
+.session-image {
+  min-height: min(42rem, 54svh);
+}
+.session-copy {
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+}
+.benefits {
+  text-align: center;
+}
+.benefits > div {
+  grid-template-columns: auto 1fr;
+  max-width: 840px;
+  margin-inline: auto;
+  text-align: left;
+}
+.network {
+  grid-template-columns: 1fr;
+  max-width: 980px;
+  margin-inline: auto;
+  gap: 1.5rem;
+  text-align: center;
+}
+.network > a {
+  grid-column: auto;
+  justify-self: center;
+}
+.faq {
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+.faq > div:first-child,
+.faq > div:last-child {
+  max-width: 920px;
+  width: 100%;
+  margin-inline: auto;
+}
+.faq > div:first-child {
+  text-align: center;
+}
+.location {
+  grid-template-columns: 1fr;
+}
+.address,
+.contact {
+  text-align: center;
+  align-items: center;
+}
+@media (max-width: 620px) {
+  .levels {
+    grid-template-columns: 1fr;
+  }
+  .levels article {
+    border-right: 0;
+    border-top: 1px solid #ffffff35;
+  }
+  .levels article:first-child {
+    border-top: 0;
+  }
+}
