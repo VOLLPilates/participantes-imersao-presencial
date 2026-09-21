@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A2 Studio Pilates e Fisioterapia">
+  <title>A2 Studio Pilates e Fisioterapia</title>
+
+  <!-- Outer colored ring (lime, magenta, orange) -->
+  <g fill="none" stroke-width="26" stroke-linecap="butt">
+    <circle cx="200" cy="200" r="176" stroke="#8BC53F"
+      stroke-dasharray="663 1106" stroke-dashoffset="0" transform="rotate(-90 200 200)" />
+    <circle cx="200" cy="200" r="176" stroke="#E6007E"
+      stroke-dasharray="276 1106" stroke-dashoffset="-663" transform="rotate(-90 200 200)" />
+    <circle cx="200" cy="200" r="176" stroke="#F7941D"
+      stroke-dasharray="221 1106" stroke-dashoffset="-939" transform="rotate(-90 200 200)" />
+  </g>
+
+  <!-- White inner disc -->
+  <circle cx="200" cy="200" r="158" fill="#FFFFFF" />
+
+  <!-- Lotus + pilates figure -->
+  <g fill="none" stroke="#1D9E75" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M200 92 C182 118 176 150 179 182 C183 202 191 218 200 230 C209 218 217 202 221 182 C224 150 218 118 200 92Z"
+      fill="#1D9E75" fill-opacity="0.16" />
+    <path d="M200 230 C170 212 154 184 157 156 C176 168 192 190 200 230Z"
+      fill="#1D9E75" fill-opacity="0.11" />
+    <path d="M200 230 C230 212 246 184 243 156 C224 168 208 190 200 230Z"
+      fill="#1D9E75" fill-opacity="0.11" />
+    <path d="M200 230 C148 218 128 196 130 170 C152 178 178 198 200 230Z"
+      fill="#1D9E75" fill-opacity="0.07" />
+    <path d="M200 230 C252 218 272 196 270 170 C248 178 222 198 200 230Z"
+      fill="#1D9E75" fill-opacity="0.07" />
+    <circle cx="200" cy="150" r="11" fill="#1D9E75" stroke="none" />
+    <path d="M200 161 Q200 180 195 204 Q191 218 188 228 M200 161 Q200 180 205 204 Q209 218 212 228 M188 228 Q200 221 212 228"
+      stroke-width="5.5" />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="200" y="282" text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+    font-size="34" font-weight="700" letter-spacing="6" fill="#1B2A4A">A2 STUDIO</text>
+</svg>
