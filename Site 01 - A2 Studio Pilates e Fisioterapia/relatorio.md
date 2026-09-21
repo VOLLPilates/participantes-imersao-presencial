@@ -8,6 +8,7 @@ Revisão realizada em 21 de setembro de 2026.
 - Endereço: Avenida Hilton Souto Maior, 5545, sala 201, Portal do Sol, João Pessoa/PB, CEP 58046-600.
 - Telefone e WhatsApp comercial: +55 83 98804-0359.
 - Instagram oficial: https://instagram.com/a2studiopilates
+- Identidade visual: logotipo fornecido no material local do projeto.
 - Horário publicado no Google Business: segunda a quinta, das 7h às 20h; sexta, sábado e domingo fechados.
 - Google Business: nota 5,0 em 77 avaliações na data da consulta.
 - Depoimentos exibidos: Mariana Sá e Silvana Mendes, identificados como avaliações do Google.
