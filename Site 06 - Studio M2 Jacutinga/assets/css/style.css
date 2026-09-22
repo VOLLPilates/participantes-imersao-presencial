@@ -917,3 +917,132 @@ h1, h2, .schedule dd { font-family: "Unbounded M2", "Onest M2", sans-serif; lett
 .seo-deep__card p, .seo-deep__source p { margin: 0; color: #675b6d; }
 .seo-deep__source { margin-top: 1rem; font-size: .92rem; }
 @media (max-width: 840px) { .seo-deep__intro, .seo-deep__grid { grid-template-columns: 1fr; } }
+
+/* Ajustes finais do Site 05/06 */
+.practice,
+.schedule,
+.faq,
+.reviews {
+  align-items: center;
+}
+
+.practice-flow,
+.schedule > div,
+.schedule dl,
+.faq > div,
+.reviews > div,
+.reviews header {
+  align-self: center;
+}
+
+.seo-deep__intro {
+  display: block;
+  max-width: 1080px;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.seo-deep h2 {
+  max-width: 930px;
+}
+
+.seo-deep__lead {
+  max-width: 760px;
+  margin-top: 1.4rem;
+}
+
+.wellhub img {
+  border-radius: 0;
+}
+
+.reviews header {
+  color: var(--teal-dark);
+}
+
+.reviews h2 {
+  max-width: 21ch;
+  color: var(--teal-dark);
+  text-wrap: balance;
+}
+
+.reviews header a {
+  color: var(--teal);
+}
+
+.reviews blockquote {
+  max-width: 760px;
+}
+
+.contact-copy {
+  color: var(--white);
+}
+
+.contact-copy h2 {
+  color: var(--white);
+}
+
+.contact-copy > p {
+  color: var(--white);
+}
+
+.contact-copy .button-outline {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+.brand img {
+  border-radius: 0;
+}
+
+.faq summary {
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  flex: 0 0 auto;
+  border-right: 2px solid var(--teal);
+  border-bottom: 2px solid var(--teal);
+  transform: rotate(45deg);
+  transition: transform 0.18s ease;
+}
+
+.faq details[open] summary::after {
+  transform: rotate(225deg);
+}
+
+.whatsapp {
+  right: 24px;
+  bottom: 24px;
+  width: 58px;
+  height: 58px;
+  border: 0;
+  background: #25d366;
+  color: #fff;
+  font-size: 0;
+  box-shadow: 0 6px 22px rgba(37, 211, 102, 0.38);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp svg {
+  display: block;
+}
+
+.whatsapp:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.48);
+}
+
+@media (max-width: 600px) {
+  .whatsapp {
+    right: 16px;
+    bottom: 16px;
+  }
+}

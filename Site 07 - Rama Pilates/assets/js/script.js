@@ -50,4 +50,15 @@
   });
   var year = document.getElementById("ano");
   if (year) year.textContent = String(new Date().getFullYear());
+
+  document.querySelectorAll("[data-reviews-track]").forEach(function (track) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var cards = Array.prototype.slice.call(track.children);
+    cards.forEach(function (card) {
+      var clone = card.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+    });
+    track.classList.add("is-looping");
+  });
 })();
