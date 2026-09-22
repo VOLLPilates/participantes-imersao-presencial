@@ -147,7 +147,13 @@
   max-width:48ch;
 }
 .hero h1{
-  max-width:11.5ch;
+  max-width:min(10em, 100%);
+}
+.hero h1 span{
+  display:block;
+}
+.hero h1 span:first-child{
+  white-space:nowrap;
 }
 .hero-caption{
   color:var(--deep);
@@ -183,6 +189,9 @@
   }
   .hero-copy{
     padding:3rem 22px;
+  }
+  .hero h1 span:first-child{
+    white-space:normal;
   }
 }
 
