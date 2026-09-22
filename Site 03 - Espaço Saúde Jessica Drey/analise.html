@@ -3,71 +3,340 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Análise do site existente | Espaço Saúde Jéssica Drey</title>
-  <meta name="description" content="Registro visual do site existente usado como referência para o projeto Espaço Saúde Jéssica Drey." />
-  <link rel="stylesheet" href="../assets/seo-expansion.css" />
+  <title>Análise de SEO e Performance | Espaço Saúde Jéssica Drey</title>
+  <meta name="description" content="Auditoria de SEO, performance (PageSpeed Insights) e recomendações de melhoria para o site do Espaço Saúde Jéssica Drey." />
+  <link rel="icon" type="image/png" href="./assets/img/favicon_jessica-drey.png" />
   <style>
-    :root { color-scheme: light; --ink:#16213b; --muted:#5d6b84; --line:#d9e0ee; --bg:#f6f8fc; --panel:#fff; --accent:#4f6df5; }
+    :root {
+      color-scheme: light;
+      --ink:#16213b; --muted:#5d6b84; --line:#d9e0ee; --bg:#f6f8fc; --panel:#fff; --accent:#b11f58; --accent-ink:#49192f;
+      --good:#1a8f5a; --good-bg:#e7f7ee;
+      --avg:#b3760a; --avg-bg:#fdf3df;
+      --bad:#c23a3a; --bad-bg:#fbe9e9;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: Inter, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
-    a { color: inherit; }
+    body { margin: 0; font-family: Archivo, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+    a { color: var(--accent); }
     header, main, footer { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-    header { padding: 48px 0 28px; }
+    header { padding: 48px 0 20px; }
     .back { display: inline-flex; min-height: 44px; align-items: center; color: var(--accent); font-weight: 700; text-decoration: none; }
-    h1 { max-width: 820px; margin: 22px 0 14px; font-size: clamp(2.2rem, 7vw, 5rem); line-height: 0.98; letter-spacing: 0; }
+    h1 { max-width: 820px; margin: 22px 0 14px; font-size: clamp(2rem, 6vw, 3.6rem); line-height: 1.02; letter-spacing: 0; font-family: 'Archivo Black', Archivo, sans-serif; }
+    h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin: 0 0 6px; }
+    h3 { font-size: 1.05rem; margin: 0 0 6px; }
     .lead { max-width: 720px; margin: 0; color: var(--muted); font-size: 1.08rem; }
-    .summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 32px 0; }
-    .summary div { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px; }
-    .summary strong { display: block; margin-bottom: 6px; }
-    .summary span { color: var(--muted); font-size: 0.94rem; }
-    figure { margin: 0 0 34px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; box-shadow: 0 24px 80px rgba(22, 33, 59, 0.08); }
-    figure img { display: block; width: 100%; height: auto; }
+    section { margin: 44px 0; }
+    .section-head { max-width: 760px; margin-bottom: 20px; }
+    .section-head p.eyebrow { margin: 0 0 6px; color: var(--accent); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .section-head p.desc { margin: 6px 0 0; color: var(--muted); }
+
+    /* Score grid */
+    .score-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .score-panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+    .score-panel__title { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .score-panel__title span { font-weight: 800; }
+    .score-panel__title small { color: var(--muted); font-size: 0.82rem; }
+    .score-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .score-chip { border-radius: 10px; padding: 12px 8px; text-align: center; }
+    .score-chip strong { display: block; font-size: 1.6rem; line-height: 1.1; }
+    .score-chip span { display: block; font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
+    .score-good { background: var(--good-bg); } .score-good strong { color: var(--good); }
+    .score-avg { background: var(--avg-bg); } .score-avg strong { color: var(--avg); }
+    .score-bad { background: var(--bad-bg); } .score-bad strong { color: var(--bad); }
+
+    /* Web vitals table */
+    .vitals-table { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+    .vitals-table th, .vitals-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--line); font-size: 0.92rem; }
+    .vitals-table th { background: #eef1f8; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+    .vitals-table tr:last-child td { border-bottom: none; }
+    .tag { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.76rem; font-weight: 700; }
+    .tag-good { background: var(--good-bg); color: var(--good); }
+    .tag-avg { background: var(--avg-bg); color: var(--avg); }
+    .tag-bad { background: var(--bad-bg); color: var(--bad); }
+
+    /* Issue cards */
+    .issues-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .issue-card { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid var(--bad); border-radius: 10px; padding: 16px 18px; }
+    .issue-card.avg { border-left-color: var(--avg); }
+    .issue-card__meta { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+    .issue-card__saving { font-size: 0.78rem; font-weight: 800; color: var(--bad); }
+    .issue-card.avg .issue-card__saving { color: var(--avg); }
+    .issue-card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+
+    /* Fix checklist */
+    .fix-list { display: grid; gap: 10px; }
+    .fix-item { display: grid; grid-template-columns: 28px 1fr; gap: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; align-items: start; }
+    .fix-item .num { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; }
+    .fix-item p { margin: 4px 0 0; color: var(--muted); font-size: 0.92rem; }
+    .fix-item strong { font-size: 0.98rem; }
+
+    /* Already fixed */
+    .fixed-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+    .fixed-item { background: var(--good-bg); border-radius: 10px; padding: 14px 16px; display: flex; gap: 10px; align-items: flex-start; }
+    .fixed-item .check { color: var(--good); font-weight: 900; }
+    .fixed-item p { margin: 2px 0 0; color: #2c5a44; font-size: 0.88rem; }
+    .fixed-item strong { font-size: 0.94rem; color: #17532f; }
+
+    /* Image callout */
+    .image-callout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 24px; align-items: center; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+    .image-callout img { width: 100%; border-radius: 8px; display: block; }
+    .image-callout__notes { display: grid; gap: 10px; }
+    .image-callout__notes li { color: var(--muted); font-size: 0.92rem; margin-bottom: 6px; }
+
+    figure.capture { margin: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; box-shadow: 0 24px 80px rgba(22, 33, 59, 0.08); }
+    figure.capture img { display: block; width: 100%; height: auto; }
     figcaption { padding: 16px 18px; color: var(--muted); font-size: 0.94rem; }
-    footer { padding: 0 0 42px; display: flex; gap: 18px; flex-wrap: wrap; }
-    footer a { min-height: 44px; display: inline-flex; align-items: center; font-weight: 700; }
-    @media (max-width: 760px) { .summary { grid-template-columns: 1fr; } header { padding-top: 32px; } }
+    .captures { display: grid; gap: 18px; }
+
+    footer { padding: 20px 0 42px; display: flex; gap: 18px; flex-wrap: wrap; }
+    footer a { min-height: 44px; display: inline-flex; align-items: center; font-weight: 700; text-decoration: none; }
+
+    @media (max-width: 760px) {
+      header { padding-top: 32px; }
+      .score-compare { grid-template-columns: 1fr; }
+      .score-row { grid-template-columns: repeat(2, 1fr); }
+      .image-callout { grid-template-columns: 1fr; }
+      .vitals-table { display: block; overflow-x: auto; }
+    }
   </style>
 </head>
 <body>
   <header>
     <a class="back" href="../index.html">← Voltar para a galeria</a>
-    <h1>Análise do site existente</h1>
-    <p class="lead">Registro visual do material encontrado para o Espaço Saúde Jéssica Drey antes da construção da nova página.</p>
+    <h1>SEO e performance: o que medir antes de publicar</h1>
+    <p class="lead">Auditoria do site atual do Espaço Saúde Jéssica Drey (Google Sites) feita no PageSpeed Insights em 22/09/2026, e o que isso significa para a nova versão estática.</p>
   </header>
+
   <main>
-    <section class="summary" aria-label="Resumo da análise">
-      <div><strong>Projeto</strong><span>Espaço Saúde Jéssica Drey</span></div>
-      <div><strong>Local</strong><span>Belo Horizonte · MG</span></div>
-      <div><strong>Uso</strong><span>Referência para conteúdo, posicionamento e melhoria visual</span></div>
+    <section aria-labelledby="scores-title">
+      <div class="section-head">
+        <p class="eyebrow">Site atual · PageSpeed Insights</p>
+        <h2 id="scores-title">Os quatro números que o Google usa pra te avaliar</h2>
+        <p class="desc">Cada nota vai de 0 a 100. Verde é bom (90+), amarelo é mediano (50-89), vermelho precisa de atenção (abaixo de 50). O site atual roda em Google Sites, uma plataforma genérica que carrega muito mais código do que uma página estática precisa.</p>
+      </div>
+      <div class="score-compare">
+        <div class="score-panel">
+          <div class="score-panel__title"><span>📱 Celular</span><small>conexão 4G simulada</small></div>
+          <div class="score-row">
+            <div class="score-chip score-bad"><strong>57</strong><span>Desempenho</span></div>
+            <div class="score-chip score-good"><strong>94</strong><span>Acessibilidade</span></div>
+            <div class="score-chip score-good"><strong>100</strong><span>Boas práticas</span></div>
+            <div class="score-chip score-avg"><strong>83</strong><span>SEO</span></div>
+          </div>
+        </div>
+        <div class="score-panel">
+          <div class="score-panel__title"><span>💻 Computador</span><small>conexão banda larga</small></div>
+          <div class="score-row">
+            <div class="score-chip score-avg"><strong>88</strong><span>Desempenho</span></div>
+            <div class="score-chip score-good"><strong>94</strong><span>Acessibilidade</span></div>
+            <div class="score-chip score-good"><strong>100</strong><span>Boas práticas</span></div>
+            <div class="score-chip score-avg"><strong>83</strong><span>SEO</span></div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="analysis-block" aria-label="Análise da página existente">
-      <figure>
-        <img src="./assets/analysis/site-atual-acesso.png" alt="Captura do site existente do Espaço Saúde Jéssica Drey" loading="eager" />
-        <figcaption>Captura do acesso ao site existente usada como referência de auditoria.</figcaption>
-      </figure>
-      <div class="analysis-block__notes">
-        <article class="analysis-note">
-          <h2>O que funciona</h2>
-          <p>A presença em Google Sites já ajuda a validar que o espaço existe e oferece um ponto de acesso básico para quem procura informações sobre Pilates em Belo Horizonte.</p>
-        </article>
-        <article class="analysis-note">
-          <h3>Oportunidade de clareza</h3>
-          <p>A nova versão organiza as modalidades em blocos fáceis de entender: Pilates clássico, funcional, clínico, Neopilates, treinamento suspenso e atividades aeróbicas. Isso ajuda o visitante a escolher o caminho certo sem depender de uma lista solta.</p>
-        </article>
-        <article class="analysis-note">
-          <h3>Melhoria de SEO</h3>
-          <p>A página nova reforça termos de busca locais como Pilates no Vale do Jatobá, Espaço Saúde Jéssica Drey, Belo Horizonte e atendimento com hora marcada, sempre conectado a dados verificados.</p>
-        </article>
-        <article class="analysis-note">
-          <h3>Melhoria de conversão</h3>
-          <p>O botão de WhatsApp, endereço, horários e avaliações aparecem de forma mais direta. Para uma pessoa leiga, isso reduz dúvida e acelera a decisão de chamar o espaço.</p>
-        </article>
+
+    <section aria-labelledby="vitals-title">
+      <div class="section-head">
+        <p class="eyebrow">Core Web Vitals</p>
+        <h2 id="vitals-title">A experiência de carregamento, em números</h2>
+        <p class="desc">São as três métricas que o Google usa diretamente no ranqueamento de busca. No celular o site atual reprova; no computador, passa.</p>
+      </div>
+      <table class="vitals-table">
+        <thead>
+          <tr><th>Métrica</th><th>O que mede</th><th>Celular</th><th>Computador</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>LCP</strong></td>
+            <td>Tempo até o maior elemento visível carregar</td>
+            <td><span class="tag tag-bad">19,1s</span></td>
+            <td><span class="tag tag-good">1,8s</span></td>
+          </tr>
+          <tr>
+            <td><strong>INP</strong></td>
+            <td>Resposta a um clique/toque</td>
+            <td><span class="tag tag-good">144ms</span></td>
+            <td><span class="tag tag-good">78ms</span></td>
+          </tr>
+          <tr>
+            <td><strong>CLS</strong></td>
+            <td>Elementos que "pulam" durante o carregamento</td>
+            <td><span class="tag tag-good">0,062</span></td>
+            <td><span class="tag tag-good">0,03</span></td>
+          </tr>
+          <tr>
+            <td><strong>FCP</strong></td>
+            <td>Primeira coisa visível na tela</td>
+            <td><span class="tag tag-bad">7,2s</span></td>
+            <td><span class="tag tag-good">1,2s</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="issues-title">
+      <div class="section-head">
+        <p class="eyebrow">Maiores gargalos encontrados (celular)</p>
+        <h2 id="issues-title">Por que o site atual demora 19 segundos pra aparecer no celular</h2>
+        <p class="desc">O Lighthouse (motor por trás do PageSpeed) aponta economia estimada em cada item — ou seja, quanto mais rápido o site ficaria se resolvesse aquilo.</p>
+      </div>
+      <div class="issues-grid">
+        <div class="issue-card">
+          <div class="issue-card__meta"><h3>Peso total da página</h3><span class="issue-card__saving">3.072 KiB</span></div>
+          <p>O Google Sites carrega scripts e estilos genéricos da plataforma que não têm relação com o conteúdo do Pilates.</p>
+        </div>
+        <div class="issue-card">
+          <div class="issue-card__meta"><h3>JavaScript não usado</h3><span class="issue-card__saving">898 KiB</span></div>
+          <p>Boa parte do código carregado nunca chega a ser executado nessa página — sobra do editor do Google Sites.</p>
+        </div>
+        <div class="issue-card">
+          <div class="issue-card__meta"><h3>Entrega de imagens</h3><span class="issue-card__saving">702 KiB</span></div>
+          <p>Imagens sem compressão adequada nem formato moderno (WebP/AVIF).</p>
+        </div>
+        <div class="issue-card avg">
+          <div class="issue-card__meta"><h3>CSS não usado</h3><span class="issue-card__saving">211 KiB</span></div>
+          <p>Folhas de estilo genéricas da plataforma, a maior parte nunca aplicada ao layout real.</p>
+        </div>
+        <div class="issue-card avg">
+          <div class="issue-card__meta"><h3>Cache de arquivos</h3><span class="issue-card__saving">521 KiB</span></div>
+          <p>Arquivos que poderiam ficar salvos no navegador do visitante não têm essa regra configurada.</p>
+        </div>
+        <div class="issue-card avg">
+          <div class="issue-card__meta"><h3>Requisições bloqueando a renderização</h3><span class="issue-card__saving">1.330 ms</span></div>
+          <p>Scripts/estilos que o navegador precisa baixar antes de mostrar qualquer coisa na tela.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="fixed-title">
+      <div class="section-head">
+        <p class="eyebrow">Nova versão estática</p>
+        <h2 id="fixed-title">O que a reconstrução já resolve de fábrica</h2>
+        <p class="desc">Trocar o Google Sites por HTML/CSS puro elimina a maior parte dos problemas acima antes mesmo de qualquer ajuste fino.</p>
+      </div>
+      <div class="fixed-grid">
+        <div class="fixed-item"><span class="check">✓</span><div><strong>Sem framework de terceiros</strong><p>Zero JavaScript de plataforma — só o necessário pro menu mobile e nada mais.</p></div></div>
+        <div class="fixed-item"><span class="check">✓</span><div><strong>Imagem do hero em WebP com fallback</strong><p>186 KB em vez de possíveis megabytes, com <code>&lt;picture&gt;</code> servindo o formato certo por navegador.</p></div></div>
+        <div class="fixed-item"><span class="check">✓</span><div><strong>Largura/altura explícitas nas imagens</strong><p>Evita o "pulo" de layout (CLS) enquanto a imagem carrega.</p></div></div>
+        <div class="fixed-item"><span class="check">✓</span><div><strong>Meta description real</strong><p>O site atual não tem nenhuma — a nova versão já publica uma descrição com palavras-chave locais.</p></div></div>
+        <div class="fixed-item"><span class="check">✓</span><div><strong>Dados estruturados (Schema.org)</strong><p><code>ExerciseGym</code> + <code>FAQPage</code>, ajudando o Google a entender endereço, horário e perguntas frequentes.</p></div></div>
+        <div class="fixed-item"><span class="check">✓</span><div><strong>Fontes com <code>font-display: swap</code></strong><p>O texto aparece imediatamente com uma fonte do sistema, sem ficar invisível esperando a fonte customizada.</p></div></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="todo-title">
+      <div class="section-head">
+        <p class="eyebrow">Pendências reais, encontradas nesta auditoria</p>
+        <h2 id="todo-title">O que ainda falta ajustar nesta pasta</h2>
+        <p class="desc">Itens específicos, verificados nos arquivos do projeto — não genéricos.</p>
+      </div>
+      <div class="fix-list">
+        <div class="fix-item">
+          <span class="num">1</span>
+          <div><strong>PNG de fallback do hero pesa 2,3 MB</strong><p><code>hero-jessica-drey.png</code> só é servido pra navegadores muito antigos sem suporte a WebP, mas ainda assim vale comprimir — hoje ele é 12x mais pesado que a versão WebP.</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">2</span>
+          <div><strong>3 arquivos <code>.ttf</code> sem uso (~310 KB)</strong><p>O CSS só referencia os <code>.woff2</code> via <code>@font-face</code>. Os <code>.ttf</code> em <code>assets/fonts/</code> não são carregados por nenhum navegador — dá pra remover da pasta.</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">3</span>
+          <div><strong>Foto do hero gerada por IA foge do que o espaço realmente é</strong><p>A imagem atual mostra uma academia grande, lotada, com TRX, kettlebell e vista de cidade/montanha ao fundo — nada disso existe numa loja de 2º andar de studio de Pilates. Também tem os típicos artefatos de IA (mãos e proporções estranhas se você olhar de perto). Isso reduz a credibilidade assim que alguém abre o site. Recomendo foto real do espaço (mesmo que feita com celular) ou, na falta dela, uma imagem gerada com prompt mais específico: sala pequena, poucos aparelhos de Pilates (reformer/cadillac), sem elementos de academia genérica.</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">4</span>
+          <div><strong>Avaliações do Google sem marcação estruturada</strong><p>Os 2 depoimentos aparecem como texto comum. Adicionar <code>Review</code>/<code>AggregateRating</code> no JSON-LD ajuda a exibir estrelas direto no resultado de busca — mas só depois de confirmar a nota real e a quantidade de avaliações no Google Business (mesmo cuidado que tomamos no Site 01, pra não publicar número inventado).</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">5</span>
+          <div><strong>Sem <code>og:image</code> com dimensões nem <code>twitter:card</code></strong><p>Existe <code>og:title</code> e <code>og:description</code>, mas falta <code>og:image:width</code>/<code>og:image:height</code> e as tags de Twitter Card — hoje um link compartilhado no WhatsApp pode não mostrar preview correto.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="seo-tips-title">
+      <div class="section-head">
+        <p class="eyebrow">Recomendações de SEO</p>
+        <h2 id="seo-tips-title">Para reforçar o ranqueamento local</h2>
+        <p class="desc">Itens que ainda não existem no projeto, além dos já listados em "pendências".</p>
+      </div>
+      <div class="fix-list">
+        <div class="fix-item">
+          <span class="num">1</span>
+          <div><strong>Sem <code>&lt;link rel="canonical"&gt;</code></strong><p>O <code>&lt;head&gt;</code> não define URL canônica. Quando o domínio final for definido, adicionar essa tag evita problemas de conteúdo duplicado (ex: acesso com e sem <code>www</code>).</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">2</span>
+          <div><strong>Sem <code>og:locale</code> nem <code>og:url</code></strong><p>Faltam essas duas tags Open Graph — ajudam redes sociais e o Google a identificar idioma (pt_BR) e URL oficial ao gerar o preview do link.</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">3</span>
+          <div><strong>Sem <code>robots.txt</code> nem <code>sitemap.xml</code></strong><p>Não existem em nenhum lugar do repositório. Antes de publicar no domínio final, vale criar os dois — ajuda o Google a rastrear e indexar mais rápido.</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">4</span>
+          <div><strong>Link de avaliações aponta pra busca genérica do Google</strong><p>O botão "Ver perfil no Google" usa <code>google.com/search?q=...</code>. Trocar pelo link direto do perfil no Google Business (<code>google.com/maps/place/...</code>) tende a casar melhor com o Local Pack — mesma correção já aplicada no Site 01.</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">5</span>
+          <div><strong>Palavra-chave de bairro incorreta</strong><p>Title, meta description e JSON-LD reforçam "Vale do Jatobá", que a captura real do site mostrou ser "Mangueiras". Precisa corrigir antes de publicar, senão o SEO local vai reforçar um bairro errado.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="general-tips-title">
+      <div class="section-head">
+        <p class="eyebrow">Melhorias gerais</p>
+        <h2 id="general-tips-title">Além de SEO e performance</h2>
+      </div>
+      <div class="fix-list">
+        <div class="fix-item">
+          <span class="num">1</span>
+          <div><strong>Sem link <code>tel:</code></strong><p>Todo contato direciona pro WhatsApp. Adicionar <code>&lt;a href="tel:+5531998609016"&gt;</code> como alternativa ajuda quem prefere ligar direto (comum em público mais velho).</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">2</span>
+          <div><strong>Sem medição de clique no CTA de WhatsApp</strong><p>Não há Google Analytics/Tag Manager configurado. Sem isso, não dá pra saber quantas pessoas realmente clicam pra chamar — vale configurar um evento simples antes do lançamento.</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">3</span>
+          <div><strong>Fotos reais disponíveis não usadas ainda</strong><p>A captura do site atual trouxe fotos reais da profissional e do espaço (Pilates, Musculação, Suspensus, LPF/Abdominais). Vale usá-las no lugar da imagem gerada por IA já sinalizada nas pendências.</p></div>
+        </div>
+        <div class="fix-item">
+          <span class="num">4</span>
+          <div><strong>Sem aviso de privacidade no rodapé</strong><p>O site direciona contato via WhatsApp (que coleta nome/telefone da conversa). Um link curto de política de privacidade no rodapé é uma boa prática, mesmo sem formulário próprio.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="capture-title">
+      <div class="section-head">
+        <p class="eyebrow">Referência</p>
+        <h2 id="capture-title">Como o site atual se apresenta</h2>
+        <p class="desc">Captura completa feita em 22/09/2026, cortada em blocos pra facilitar a leitura.</p>
+      </div>
+      <div class="captures">
+        <figure class="capture">
+          <img src="./assets/analysis/site-atual-hero-servicos.png" alt="Hero e seção de serviços do site existente do Espaço Saúde Jéssica Drey, mostrando Pilates, Musculação, Suspensus e LPF/Abdominais" loading="lazy" />
+          <figcaption>Hero e "Nossos Serviços" — fotos reais do espaço e da profissional, com 4 modalidades: Pilates, Musculação, Suspensus e LPF/Abdominais.</figcaption>
+        </figure>
+        <figure class="capture">
+          <img src="./assets/analysis/site-atual-quemsomos-depoimentos.png" alt="Seção Quem Somos e Depoimentos do site existente do Espaço Saúde Jéssica Drey" loading="lazy" />
+          <figcaption>"Quem Somos" (inauguração em 2016, mais de 8 anos de atuação) e os 3 depoimentos publicados no site: Luana Soares, Thiago Alves e Ana Alquimim.</figcaption>
+        </figure>
+        <figure class="capture">
+          <img src="./assets/analysis/site-atual-contato.png" alt="Seção de localização e contato do site existente do Espaço Saúde Jéssica Drey" loading="lazy" />
+          <figcaption>Localização e contato do site existente.</figcaption>
+        </figure>
       </div>
     </section>
   </main>
+
   <footer>
     <a href="./index.html">Abrir projeto novo</a>
     <a href="../index.html">Galeria completa</a>
+    <a href="https://pagespeed.web.dev/analysis/https-sites-google-com-view-espacosaudejessicadreypilates/tuk6h59jd7?form_factor=mobile" target="_blank" rel="noopener">Relatório PageSpeed (celular) ↗</a>
+    <a href="https://pagespeed.web.dev/analysis/https-sites-google-com-view-espacosaudejessicadreypilates/tuk6h59jd7?form_factor=desktop" target="_blank" rel="noopener">Relatório PageSpeed (computador) ↗</a>
   </footer>
 </body>
 </html>
