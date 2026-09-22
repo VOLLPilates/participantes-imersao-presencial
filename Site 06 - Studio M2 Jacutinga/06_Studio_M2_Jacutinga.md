@@ -1,5 +1,7 @@
 # Relatório de Identificação Digital - Studio M2 (Jacutinga)
 
+> Atualização em 22 de setembro de 2026: a planilha oficial indica Studio M2 tanto para o Site 05 quanto para o Site 06. Os participantes informados são Meridiey Leite de Melo e Monique Leite de Melo, sugerindo vínculo entre os dois cadastros. Esse vínculo deve orientar a auditoria interna, mas não deve ser publicado como afirmação sem confirmação direta.
+
 ## O Studio possui um site? (em domínio próprio)
 Se sim: analise a estrutura e SEO, e crie um relatorio.md com cada ponto que poderia ser melhorado;
 Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. Busque no instagram Logo e cores mais utilizadas em publicações com imagens.
@@ -21,6 +23,7 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 * **Localização:** Jacutinga / MG
 * **Status no Google Business:** Sim (Cadastrado e Ativo)
 * **Nome do Cadastro no Google:** Studio M2 - Pilates, Neopilates e Treinamento de força
+* **Possível vínculo com Site 05:** Sim. A planilha interna traz Studio M2 em Joinville e Studio M2 em Jacutinga, com participantes de mesmo sobrenome. Busca pública encontrou Meridiey Leite de Melo vinculada ao nome fantasia M2 Studio Pilates e Treinamento Customizado em Jacutinga/MG, com CNPJ baixado.
 
 ---
 
@@ -37,9 +40,13 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 
 ### 🔗 Outras Páginas Encontradas na Internet:
 * [Infobel Diretório - Studio M2](https://www.infobel.com/pt/brazil/studio_pilates_fisioterapia_avenida/ouro_fino/BR112509214-3536361888/businessdetails.aspx)
+* Cadastro público: Meridiey Leite de Melo / M2 Studio Pilates e Treinamento Customizado, Jacutinga/MG, situação baixada.
+* Planilha interna: Monique Leite de Melo / Studio M2 / Rua Santo Antônio, 766, Centro, Jacutinga/MG.
+* Planilha interna relacionada: Meridiey Leite de Melo / Studio M2 / Rua São Firmino, 88, Vila Nova, Joinville.
 
 ---
 
 ## 📋 Serviços e Observações
 * **Serviços Oferecidos:** Pilates, Neopilates e Treinamento de Força.
 * **Observações Complementares:** Localizado na área central de Jacutinga / MG.
+* **Observação sobre Site 05:** Apesar do indício de vínculo com Studio M2, a unidade de Joinville aparece publicamente como Lótus Pilates — Unidade Vila Nova. Não renomear publicamente o Site 05 para Studio M2 sem confirmação direta.
