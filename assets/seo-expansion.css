@@ -193,3 +193,508 @@
     position: static;
   }
 }
+
+/* Visual alignment pass: bring participant sites 02-09 closer to the Site 01/10 system. */
+body:has(main .hero) {
+  --lp-ink: var(--navy, var(--violet-950, var(--deep, var(--plum, var(--coal, var(--ink, #1b2a4a))))));
+  --lp-accent: var(--turquoise, var(--teal, var(--wine, var(--green, var(--violet-700, var(--plum2, #1d9e75))))));
+  --lp-accent-2: var(--aqua, var(--acid, var(--magenta, var(--rose, var(--teal-500, #8bc53f)))));
+  --lp-paper: var(--paper, var(--mist, var(--fog, #faf8f5)));
+  --lp-surface: var(--white, #fff);
+  --lp-muted: var(--gray-600, var(--ink-soft, var(--muted, #5f6b7a)));
+  --lp-line: var(--line, rgba(27, 42, 74, 0.14));
+  --lp-shadow: 0 22px 58px -44px color-mix(in srgb, var(--lp-ink) 68%, transparent);
+  --lp-radius: 8px;
+  background: var(--lp-surface);
+  color: var(--lp-ink);
+  overflow-x: hidden;
+}
+
+body:has(main .hero) h1,
+body:has(main .hero) h2,
+body:has(main .hero) h3 {
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+body:has(main .hero) p,
+body:has(main .hero) li,
+body:has(main .hero) dd,
+body:has(main .hero) address {
+  text-wrap: pretty;
+}
+
+body:has(main .hero) > header,
+body:has(main .hero) .site-header,
+body:has(main .hero) .topbar {
+  position: sticky !important;
+  top: 0;
+  z-index: 60;
+  min-height: 78px;
+  height: auto;
+  padding: 0 clamp(1rem, 4vw, 3.5rem);
+  border-bottom: 1px solid color-mix(in srgb, var(--lp-ink) 12%, transparent);
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: var(--lp-ink) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 16px 42px -38px color-mix(in srgb, var(--lp-ink) 74%, transparent);
+}
+
+body:has(main .hero) > header nav,
+body:has(main .hero) .site-header nav,
+body:has(main .hero) .topbar nav {
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+body:has(main .hero) > header nav a,
+body:has(main .hero) .site-header nav a,
+body:has(main .hero) .topbar nav a {
+  min-height: 44px;
+  color: var(--lp-ink);
+  font-size: 0.92rem;
+  font-weight: 720;
+  text-decoration: none;
+}
+
+body:has(main .hero) .brand,
+body:has(main .hero) .wordmark,
+body:has(main .hero) .brand-lockup {
+  color: var(--lp-ink);
+}
+
+body:has(main .hero) .brand img,
+body:has(main .hero) .wordmark img,
+body:has(main .hero) .brand-lockup img {
+  max-height: 62px;
+  object-fit: contain;
+}
+
+body:has(main .hero) .header-cta,
+body:has(main .hero) .head-cta,
+body:has(main .hero) .nav-cta,
+body:has(main .hero) main .button,
+body:has(main .hero) main .primary,
+body:has(main .hero) main .contact-number,
+body:has(main .hero) .side-cta,
+body:has(main .hero) .hero-copy > a,
+body:has(main .hero) main > .hero .actions a {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid var(--lp-accent);
+  border-radius: var(--lp-radius);
+  background: var(--lp-accent);
+  color: #fff;
+  padding: 0.78rem 1.18rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: none;
+  transition: transform 0.22s ease, background 0.22s ease, border-color 0.22s ease;
+}
+
+body:has(main .hero) .header-cta:hover,
+body:has(main .hero) .head-cta:hover,
+body:has(main .hero) .nav-cta:hover,
+body:has(main .hero) main .button:hover,
+body:has(main .hero) main .primary:hover,
+body:has(main .hero) main .contact-number:hover,
+body:has(main .hero) .side-cta:hover,
+body:has(main .hero) .hero-copy > a:hover,
+body:has(main .hero) main > .hero .actions a:hover {
+  transform: translateY(-2px);
+  background: var(--lp-ink);
+  border-color: var(--lp-ink);
+  color: #fff;
+}
+
+body:has(main .hero) main > .hero {
+  position: relative !important;
+  isolation: isolate;
+  margin-top: 0 !important;
+  min-height: calc(100svh - 78px) !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden;
+  padding: clamp(5rem, 9vw, 8rem) clamp(1rem, 4vw, 2rem) !important;
+  background: var(--lp-ink);
+  color: #fff !important;
+  text-align: center;
+}
+
+body:has(main .hero) main > .hero > picture,
+body:has(main .hero) main > .hero .hero-art,
+body:has(main .hero) main > .hero .hero-media,
+body:has(main .hero) main > .hero .hero-visual {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+body:has(main .hero) main > .hero .hero-visual picture {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body:has(main .hero) main > .hero > picture img,
+body:has(main .hero) main > .hero .hero-art img,
+body:has(main .hero) main > .hero .hero-media img,
+body:has(main .hero) main > .hero .hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+body:has(main .hero) main > .hero::after {
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--lp-ink) 90%, transparent) 0%, color-mix(in srgb, var(--lp-accent) 58%, transparent) 100%),
+    linear-gradient(0deg, color-mix(in srgb, var(--lp-ink) 50%, transparent), transparent 62%);
+}
+
+body:has(main .hero) main > .hero .hero-overlay,
+body:has(main .hero) main > .hero .hero-shade {
+  display: none !important;
+}
+
+body:has(main .hero) main > .hero .hero-copy,
+body:has(main .hero) main > .hero .hero-content {
+  position: relative !important;
+  z-index: 2;
+  width: min(850px, 94vw) !important;
+  max-width: 850px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  justify-items: center;
+  align-content: center;
+  gap: 1rem;
+  padding: 0 !important;
+  background: transparent !important;
+  color: #fff !important;
+}
+
+body:has(main .hero) main > .hero .hero-copy > p:first-child,
+body:has(main .hero) main > .hero .hero-content > p:first-child,
+body:has(main .hero) main > .hero .place {
+  margin: 0;
+  color: color-mix(in srgb, #fff 78%, var(--lp-accent-2));
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body:has(main .hero) main > .hero h1 {
+  max-width: 12em !important;
+  margin: 0.25rem auto 0.35rem !important;
+  color: #fff !important;
+  font-size: clamp(2.8rem, 6.8vw, 5.6rem) !important;
+  line-height: 1.02 !important;
+  letter-spacing: 0 !important;
+}
+
+body:has(main .hero) main > .hero .hero-lead,
+body:has(main .hero) main > .hero .hero-copy > span,
+body:has(main .hero) main > .hero .hero-content > span {
+  max-width: 60ch;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+  line-height: 1.65;
+}
+
+body:has(main .hero) main > .hero .hero-actions,
+body:has(main .hero) main > .hero .actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+body:has(main .hero) main > .hero .text-link {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.72);
+}
+
+body:has(main .hero) main > .hero .hero-note,
+body:has(main .hero) main > .hero .hero-caption {
+  position: absolute;
+  right: clamp(1rem, 4vw, 2rem);
+  bottom: clamp(1rem, 4vw, 2rem);
+  z-index: 2;
+  margin: 0;
+  writing-mode: horizontal-tb;
+  border-radius: var(--lp-radius);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--lp-ink);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+body:has(main .hero) main > .hero .side-cta {
+  position: relative !important;
+  z-index: 2;
+  width: auto !important;
+  align-self: center;
+  margin-top: 1rem;
+}
+
+body:has(main .hero) main > section:not(.hero):not(.facts):not(.benefit-strip):not(.brand-band):not(.opening-line) {
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+}
+
+body:has(main .hero) .facts,
+body:has(main .hero) .benefit-strip,
+body:has(main .hero) .brand-band,
+body:has(main .hero) .opening-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: 1rem clamp(1rem, 4vw, 2rem);
+  background: color-mix(in srgb, var(--lp-accent) 12%, #fff);
+  color: var(--lp-ink);
+}
+
+body:has(main .hero) .facts > *,
+body:has(main .hero) .benefit-strip > span,
+body:has(main .hero) .brand-band > span,
+body:has(main .hero) .opening-line > * {
+  border-radius: 999px;
+  background: #fff;
+  padding: 0.68rem 1rem;
+  box-shadow: 0 1px 0 var(--lp-line);
+}
+
+body:has(main .hero) .intro,
+body:has(main .hero) .care,
+body:has(main .hero) .progression,
+body:has(main .hero) .modalities,
+body:has(main .hero) .practice,
+body:has(main .hero) .structure,
+body:has(main .hero) .hybrid,
+body:has(main .hero) .experience,
+body:has(main .hero) .services,
+body:has(main .hero) .service-lanes,
+body:has(main .hero) .journey {
+  background: var(--lp-surface);
+}
+
+body:has(main .hero) .seo-deep,
+body:has(main .hero) .faq,
+body:has(main .hero) .hours,
+body:has(main .hero) .schedule,
+body:has(main .hero) .place,
+body:has(main .hero) .principles,
+body:has(main .hero) .location {
+  background: color-mix(in srgb, var(--lp-accent) 8%, #fff) !important;
+}
+
+body:has(main .hero) .contact,
+body:has(main .hero) .ratings,
+body:has(main .hero) .specialist,
+body:has(main .hero) .wellhub {
+  background: var(--lp-ink) !important;
+  color: #fff !important;
+}
+
+body:has(main .hero) .contact h2,
+body:has(main .hero) .ratings h2,
+body:has(main .hero) .specialist h2,
+body:has(main .hero) .wellhub h2,
+body:has(main .hero) .contact p,
+body:has(main .hero) .ratings p,
+body:has(main .hero) .specialist p,
+body:has(main .hero) .wellhub p,
+body:has(main .hero) .contact address {
+  color: inherit !important;
+}
+
+body:has(main .hero) .intro,
+body:has(main .hero) .care,
+body:has(main .hero) .hybrid,
+body:has(main .hero) .experience,
+body:has(main .hero) .faq,
+body:has(main .hero) .place,
+body:has(main .hero) .location,
+body:has(main .hero) .schedule,
+body:has(main .hero) .hours,
+body:has(main .hero) .contact,
+body:has(main .hero) .wellhub {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+body:has(main .hero) .section-intro,
+body:has(main .hero) .practice-title,
+body:has(main .hero) .structure-heading,
+body:has(main .hero) .headline,
+body:has(main .hero) .services-title,
+body:has(main .hero) .testimonials-title,
+body:has(main .hero) .reviews-head,
+body:has(main .hero) .reviews header,
+body:has(main .hero) .faq > div:first-child {
+  max-width: 760px;
+}
+
+body:has(main .hero) main h2 {
+  font-size: clamp(2.1rem, 4.8vw, 4.4rem);
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+body:has(main .hero) main h3 {
+  font-size: clamp(1.18rem, 2vw, 1.55rem);
+}
+
+body:has(main .hero) .services article,
+body:has(main .hero) .levels article,
+body:has(main .hero) .modality-index article,
+body:has(main .hero) .modalities article,
+body:has(main .hero) .practice-flow article,
+body:has(main .hero) .seo-deep__card,
+body:has(main .hero) .seo-deep__source,
+body:has(main .hero) .testimonials figure,
+body:has(main .hero) .reviews blockquote,
+body:has(main .hero) .google-reviews blockquote,
+body:has(main .hero) .structure li,
+body:has(main .hero) .principles div,
+body:has(main .hero) .place-note,
+body:has(main .hero) .structure-aside {
+  border: 1px solid var(--lp-line) !important;
+  border-radius: var(--lp-radius) !important;
+  background: var(--lp-surface) !important;
+  color: var(--lp-ink) !important;
+  box-shadow: var(--lp-shadow);
+}
+
+body:has(main .hero) .seo-deep__grid,
+body:has(main .hero) .practice-flow,
+body:has(main .hero) .levels,
+body:has(main .hero) .google-reviews,
+body:has(main .hero) .reviews > div:last-child,
+body:has(main .hero) .structure ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+body:has(main .hero) .services article,
+body:has(main .hero) .levels article,
+body:has(main .hero) .practice-flow article,
+body:has(main .hero) .structure li,
+body:has(main .hero) .principles div,
+body:has(main .hero) .place-note,
+body:has(main .hero) .structure-aside {
+  padding: clamp(1.15rem, 2vw, 1.55rem);
+}
+
+body:has(main .hero) .reviews blockquote,
+body:has(main .hero) .testimonials figure,
+body:has(main .hero) .google-reviews blockquote {
+  min-height: 0;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+body:has(main .hero) details {
+  border-bottom: 1px solid var(--lp-line);
+}
+
+body:has(main .hero) summary {
+  min-height: 64px;
+  color: var(--lp-ink);
+}
+
+body:has(main .hero) details p {
+  max-width: 72ch;
+}
+
+body:has(main .hero) footer {
+  border-top: 1px solid color-mix(in srgb, #fff 14%, transparent);
+  background: var(--lp-ink) !important;
+  color: #fff !important;
+}
+
+@media (max-width: 960px) {
+  body:has(main .hero) > header nav,
+  body:has(main .hero) .site-header nav,
+  body:has(main .hero) .topbar nav {
+    display: none;
+  }
+
+  body:has(main .hero) .intro,
+  body:has(main .hero) .care,
+  body:has(main .hero) .hybrid,
+  body:has(main .hero) .experience,
+  body:has(main .hero) .faq,
+  body:has(main .hero) .place,
+  body:has(main .hero) .location,
+  body:has(main .hero) .schedule,
+  body:has(main .hero) .hours,
+  body:has(main .hero) .contact,
+  body:has(main .hero) .wellhub {
+    grid-template-columns: 1fr;
+  }
+
+  body:has(main .hero) main > .hero {
+    min-height: calc(100svh - 74px) !important;
+  }
+}
+
+@media (max-width: 620px) {
+  body:has(main .hero) > header,
+  body:has(main .hero) .site-header,
+  body:has(main .hero) .topbar {
+    min-height: 74px;
+    padding-inline: 18px;
+  }
+
+  body:has(main .hero) .brand img,
+  body:has(main .hero) .wordmark img,
+  body:has(main .hero) .brand-lockup img {
+    max-height: 52px;
+  }
+
+  body:has(main .hero) main > .hero {
+    min-height: calc(100svh - 74px) !important;
+    padding-inline: 22px !important;
+  }
+
+  body:has(main .hero) main > .hero h1 {
+    font-size: clamp(2.45rem, 12vw, 3.8rem) !important;
+  }
+
+  body:has(main .hero) main > .hero .hero-note,
+  body:has(main .hero) main > .hero .hero-caption {
+    display: none;
+  }
+}
