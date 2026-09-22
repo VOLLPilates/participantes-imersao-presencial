@@ -45,6 +45,63 @@
     element.classList.add("is-in", "visible");
   });
 
+  var reviewCarousel = document.querySelector("[data-reviews-carousel]");
+  if (reviewCarousel) {
+    var reviewTrack = reviewCarousel.querySelector("[data-carousel-track]");
+    var reviewSlides = Array.prototype.slice.call(reviewCarousel.querySelectorAll(".review-card"));
+    var previousReview = reviewCarousel.querySelector("[data-carousel-prev]");
+    var nextReview = reviewCarousel.querySelector("[data-carousel-next]");
+    var reviewStatus = reviewCarousel.querySelector("[data-carousel-status]");
+    var reviewDots = Array.prototype.slice.call(document.querySelectorAll("[data-carousel-dot]"));
+    var currentReview = 0;
+
+    function visibleReviews() {
+      if (window.matchMedia("(max-width: 640px)").matches) return 1;
+      if (window.matchMedia("(max-width: 980px)").matches) return 2;
+      return 4;
+    }
+
+    function maxReviewIndex() {
+      return Math.max(0, reviewSlides.length - visibleReviews());
+    }
+
+    function updateReviewLayout() {
+      var gap = parseFloat(window.getComputedStyle(reviewTrack).gap) || 0;
+      var slideWidth = reviewSlides[0] ? reviewSlides[0].getBoundingClientRect().width : 0;
+      reviewTrack.style.transform = "translateX(-" + (currentReview * (slideWidth + gap)) + "px)";
+      reviewDots.forEach(function (dot, dotIndex) {
+        var available = dotIndex <= maxReviewIndex();
+        dot.hidden = !available;
+        dot.setAttribute("aria-hidden", String(!available));
+      });
+    }
+
+    function showReview(index) {
+      currentReview = Math.max(0, Math.min(index, maxReviewIndex()));
+      previousReview.disabled = currentReview === 0;
+      nextReview.disabled = currentReview === maxReviewIndex();
+      if (reviewStatus) reviewStatus.textContent = (currentReview + 1) + " / " + (maxReviewIndex() + 1);
+      reviewDots.forEach(function (dot, dotIndex) {
+        var active = dotIndex === currentReview;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-selected", String(active));
+      });
+      updateReviewLayout();
+    }
+
+    previousReview.addEventListener("click", function () { showReview(currentReview - 1); });
+    nextReview.addEventListener("click", function () { showReview(currentReview + 1); });
+    reviewDots.forEach(function (dot) {
+      dot.addEventListener("click", function () { showReview(Number(dot.getAttribute("data-carousel-dot"))); });
+    });
+    reviewCarousel.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowLeft") showReview(currentReview - 1);
+      if (event.key === "ArrowRight") showReview(currentReview + 1);
+    });
+    window.addEventListener("resize", updateReviewLayout);
+    showReview(0);
+  }
+
   document.querySelectorAll("[data-year]").forEach(function (element) {
     element.textContent = String(new Date().getFullYear());
   });
