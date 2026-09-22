@@ -124,6 +124,12 @@ img {
   transition: transform 500ms var(--ease);
 }
 
+.project__project-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
 .js .project:not(.is-visible) {
   transform: translateY(22px);
 }
@@ -185,13 +191,15 @@ img {
 }
 
 .project:hover .project__media,
-.project:focus-visible .project__media {
+.project:focus-visible .project__media,
+.project:focus-within .project__media {
   outline: 2px solid var(--accent);
   outline-offset: 5px;
 }
 
 .project:hover .project__media img,
-.project:focus-visible .project__media img {
+.project:focus-visible .project__media img,
+.project:focus-within .project__media img {
   filter: saturate(1.05) contrast(1.02);
   transform: scale(1.035);
 }
@@ -270,8 +278,43 @@ img {
     gap 220ms var(--ease);
 }
 
+.project__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.project__actions a {
+  text-decoration: none;
+}
+
+.project__analysis {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--project-accent) 60%, transparent);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition:
+    border-color 220ms var(--ease),
+    color 220ms var(--ease),
+    gap 220ms var(--ease);
+}
+
+.project__analysis:hover,
+.project__analysis:focus-visible {
+  gap: 0.8rem;
+  border-color: var(--project-accent);
+  color: var(--project-accent);
+  outline: none;
+}
+
 .project:hover .project__action,
-.project:focus-visible .project__action {
+.project:focus-visible .project__action,
+.project:focus-within .project__action {
   gap: 0.8rem;
   color: var(--accent);
 }
@@ -297,6 +340,9 @@ img {
   }
   .project__action {
     width: fit-content;
+  }
+  .project__actions {
+    align-items: flex-start;
   }
 }
 
