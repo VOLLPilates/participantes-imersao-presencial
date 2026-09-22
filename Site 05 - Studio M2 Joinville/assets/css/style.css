@@ -3,6 +3,19 @@
   src: url("../fonts/manrope-400.woff2") format("woff2");
   font-display: swap;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
 @font-face {
   font-family: Manrope;
   src: url("../fonts/manrope-700.woff2") format("woff2");
@@ -162,7 +175,7 @@ nav a {
   border-radius: 50%;
 }
 .progression {
-  padding: clamp(5rem, 8vw, 8rem) clamp(1.2rem, 6vw, 7rem);
+  padding: clamp(6rem, 10vw, 10rem) clamp(1.2rem, 6vw, 7rem);
 }
 .headline {
   display: grid;
@@ -185,9 +198,9 @@ nav a {
   border-top: 1px solid #ffffff35;
 }
 .levels article {
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   border-right: 1px solid #ffffff35;
-  min-height: 19rem;
+  min-height: 17rem;
 }
 .levels article:first-child {
   padding-left: 0;
@@ -204,12 +217,12 @@ nav a {
 }
 .session {
   display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
+  grid-template-columns: 1.1fr 0.9fr;
   background: var(--fog);
   color: #17201b;
 }
 .session-image {
-  min-height: 45rem;
+  min-height: 40rem;
   overflow: hidden;
 }
 .session-image picture,

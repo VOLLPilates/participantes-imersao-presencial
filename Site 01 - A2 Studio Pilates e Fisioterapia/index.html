@@ -10,14 +10,12 @@
     <meta name="keywords" content="pilates, João Pessoa, Portal do Sol, MetaLife, bem-estar, A2 Studio" />
     <meta name="author" content="A2 Studio Pilates e Fisioterapia" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://a2studiopilates.com.br/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="A2 Studio Pilates e Fisioterapia | João Pessoa - PB" />
     <meta property="og:description" content="Pilates com atendimento personalizado em João Pessoa - PB. Agende sua aula pelo WhatsApp." />
     <meta property="og:locale" content="pt_BR" />
-    <meta property="og:url" content="https://a2studiopilates.com.br/" />
     <meta property="og:site_name" content="A2 Studio Pilates e Fisioterapia" />
 
     <!-- Twitter -->
@@ -33,8 +31,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Favicon (inline SVG lotus) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='white' stroke='%231D9E75' stroke-width='2'/%3E%3Cpath d='M50 25 C42 35 42 55 50 70 C58 55 58 35 50 25Z' fill='%231D9E75'/%3E%3Cpath d='M50 70 C35 60 30 45 32 35 C40 42 47 55 50 70Z' fill='%231D9E75' opacity='0.6'/%3E%3Cpath d='M50 70 C65 60 70 45 68 35 C60 42 53 55 50 70Z' fill='%231D9E75' opacity='0.6'/%3E%3C/svg%3E" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon_a2-studio.png" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -57,7 +54,13 @@
         "bestRating": "5",
         "ratingCount": "77"
       },
-      "sameAs": ["https://instagram.com/a2studiopilates"]
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      "sameAs": ["https://instagram.com/a2studiopilates", "https://www.facebook.com/a2studiopilates/"]
     }
     </script>
 </head>
@@ -67,10 +70,7 @@
     <header id="header" class="header">
       <div class="container header-inner">
         <a href="#inicio" class="logo-link" aria-label="A2 Studio Pilates e Fisioterapia - Início">
-          <div class="logo-circle">
-            <img src="public/images/logo_site-01.svg" alt="A2 Studio Pilates e Fisioterapia" class="logo-img" />
-          </div>
-          <span class="logo-text">A2 STUDIO</span>
+          <img class="brand-logo" src="./assets/img/logo_a2-studio.png" width="200" height="139" alt="A2 Studio" />
         </a>
 
         <nav class="nav-desktop" aria-label="Navegação principal">
@@ -116,7 +116,7 @@
       <!-- Hero -->
       <section id="inicio" class="hero">
         <div class="hero-bg">
-          <img src="https://images.pexels.com/photos/11036671/pexels-photo-11036671.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Estúdio de pilates com aparelhos reformer e janelas grandes com luz natural" loading="eager" />
+          <img src="./assets/img/hero-pilates.jpg" width="1600" height="1067" alt="Estúdio de pilates com aparelhos reformer e janelas grandes com luz natural" loading="eager" fetchpriority="high" />
           <div class="hero-overlay"></div>
         </div>
         <div class="container hero-content">
@@ -148,13 +148,13 @@
               <p>Nosso estúdio é amplo, com piso claro, janelas grandes e luz natural, equipado com aparelhos de pilates da marca <strong>MetaLife</strong> — incluindo cadillac, reformer e chair — para que cada sessão seja segura, eficiente e personalizada.</p>
               <ul class="check-list">
                 <li>Atendimento personalizado por horário agendado</li>
-                <li>Equipamentos MetaLife: cadillac, reformer e chair</li>
+                <li>Equipamentos de Pilates novos e bem cuidados</li>
                 <li>Equipe de profissionais qualificados</li>
                 <li>Ambiente acolhedor com luz natural</li>
               </ul>
             </div>
             <div class="section-image reveal">
-              <img src="https://images.pexels.com/photos/25599829/pexels-photo-25599829.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Estúdio de pilates amplo e iluminado com aparelhos de madeira" loading="lazy" />
+              <img src="./assets/img/studio-pilates.jpg" width="900" height="600" alt="Estúdio de pilates amplo e iluminado com aparelhos de madeira" loading="lazy" />
               <div class="image-accent accent-turquoise"></div>
             </div>
           </div>
@@ -205,7 +205,7 @@
                 <li>Sessões personalizadas</li>
                 <li>Foco em postura e mobilidade</li>
               </ul>
-              <img src="public/images/imagem_com_barrel.jpg" alt="Aluna praticando pilates na escada barrel MetaLife no A2 Studio" loading="lazy" class="card-image" />
+              <img src="./assets/img/pilates-reformer.jpg" width="600" height="900" alt="Mulher praticando pilates em reformer" loading="lazy" class="card-image" />
             </article>
 
             <article class="service-card reveal">
@@ -221,7 +221,7 @@
                 <li>Foco em mobilidade e estabilidade</li>
                 <li>Aulas para todos os níveis</li>
               </ul>
-              <img src="public/images/imagem_com_anel.jpg" alt="Aluna praticando exercício de mobilidade com pilates ring no A2 Studio" loading="lazy" class="card-image" />
+              <img src="./assets/img/fisioterapia.jpg" width="600" height="400" alt="Sala clara de atendimento corporal com maca e equipamentos de apoio" loading="lazy" class="card-image" />
             </article>
           </div>
         </div>
@@ -265,7 +265,7 @@
                 <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg>
               </div>
               <h3>Estrutura do estúdio</h3>
-              <p>Ambiente amplo e iluminado, com aparelhos MetaLife de alta qualidade para uma prática segura e completa.</p>
+              <p>Ambiente amplo e iluminado, com estrutura e equipamentos elogiados nas avaliações públicas do estúdio.</p>
             </div>
 
             <div class="diferencial-card reveal">
@@ -299,7 +299,7 @@
             <div class="google-badge-info">
               <span class="google-rating">5,0</span>
               <div class="rating-stars large">★★★★★</div>
-              <span class="google-label">77 avaliações no Google</span>
+              <span class="google-label">77 avaliações no Google · consulta em 21/09/2026</span>
             </div>
           </div>
 
@@ -347,6 +347,7 @@
           <div class="reviews-cta reveal">
             <a href="https://www.google.com/maps/place/A2+Studio+Pilates+e+Fisioterapia/@-7.1601601,-34.8172757,17z/data=!3m1!4b1!4m6!3m5!1s0x7acc39b247f0b79:0x1a0d8460ff090905!8m2!3d-7.1601601!4d-34.8172757" target="_blank" rel="noopener" class="depoimento-link">Ver todas as 77 avaliações no Google →</a>
           </div>
+          <p class="avaliacoes-source reveal"><a href="https://www.google.com/search?q=A2+Studio+Pilates+e+Fisioterapia+Joao+Pessoa" target="_blank" rel="noopener">Ver perfil e avaliações no Google →</a></p>
         </div>
       </section>
 
@@ -396,7 +397,7 @@
                 </div>
                 <div>
                   <h3>Horário de funcionamento</h3>
-                  <p>Atendimento por agendamento<br><em>A confirmar com o estúdio</em></p>
+                  <p>Segunda a quinta, das 7h às 20h<br><em>Sexta, sábado e domingo: fechado</em></p>
                 </div>
               </div>
 
@@ -428,13 +429,7 @@
       <div class="container">
         <div class="footer-grid">
           <div class="footer-brand">
-            <div class="logo-circle small">
-              <img src="public/images/logo_site-01.svg" alt="A2 Studio Pilates e Fisioterapia" class="logo-img" />
-            </div>
-            <div>
-              <p class="footer-name">A2 STUDIO</p>
-              <p class="footer-sub">Pilates</p>
-            </div>
+            <img class="footer-logo" src="./assets/img/logo_a2-studio.png" width="200" height="139" alt="A2 Studio Pilates e Fisioterapia" loading="lazy" />
           </div>
 
           <div class="footer-links">
@@ -455,6 +450,7 @@
             <p>Avenida Hilton Souto Maior, 5545, Sala 201<br>Portal do Sol, João Pessoa - PB<br>CEP 58046-600</p>
             <p><a href="https://wa.me/5583988040359" target="_blank" rel="noopener">+55 83 98804-0359</a></p>
             <p><a href="https://instagram.com/a2studiopilates" target="_blank" rel="noopener">@a2studiopilates</a></p>
+            <p><a href="https://www.facebook.com/a2studiopilates/" target="_blank" rel="noopener">Facebook oficial</a></p>
           </div>
         </div>
 

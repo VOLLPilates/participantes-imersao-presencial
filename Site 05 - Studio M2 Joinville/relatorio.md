@@ -1,6 +1,6 @@
 # Lótus Pilates — Unidade Vila Nova
 
-Revisão realizada em 17 de setembro de 2026. Revisão complementar de nomenclatura em 22 de setembro de 2026.
+Revisão realizada em 17 de setembro de 2026. Revisões complementares em 21 de setembro de 2026 e 22 de setembro de 2026.
 
 ## Identificação
 
@@ -23,10 +23,12 @@ Conclusão operacional: manter o Site 05 publicado como Lótus Pilates — Unida
 
 ## Dados publicados
 
-- Unidade: Rua São Firmino, 88, sala 1, Vila Nova, Joinville/SC.
-- WhatsApp: +55 47 99289-7343.
+- Nome oficial: Lótus Pilates — Unidade Vila Nova.
+- Endereço: Rua São Firmino, 88, sala 1, Vila Nova, Joinville/SC, CEP 89237-356.
+- Telefone e WhatsApp: +55 47 99289-7343.
 - Serviço confirmado: Pilates.
-- Fisioterapia não é anunciada para esta unidade.
+- Instagram da marca: https://www.instagram.com/lotusfisiopilatesjlle/
+- Horários: consultar pelo WhatsApp.
 
 ## Fontes
 
@@ -37,6 +39,7 @@ Conclusão operacional: manter o Site 05 publicado como Lótus Pilates — Unida
 - Cadastro público de apoio: razão social Kelly Rose Pilates Ltda — Espaço Lótus Pilates, Rua São Firmino, 88, sala 01, Vila Nova.
 - Planilha interna do projeto: Meridiey Leite de Melo / Studio M2 / Rua São Firmino, 88, Vila Nova, Joinville.
 - Nacional Consultas: Meridiey Leite de Melo, nome fantasia M2 Studio Pilates e Treinamento Customizado, CNPJ baixado em Jacutinga/MG.
+- TotalPass da unidade: https://totalpass.com/br/academias/lotus-pilates-38dc15c0-520d-47e1-a9a6-31f0d4fbcac0/ — endereço e Pilates.
 
 ## Resultado da busca por “Studio M2”
 
@@ -44,7 +47,11 @@ Conclusão operacional: manter o Site 05 publicado como Lótus Pilates — Unida
 - Os resultados relevantes redirecionam para a presença pública da Lótus Pilates.
 - Diretórios locais apresentam divergências de endereço em alguns casos, citando Rua Joaquim Girardi; para a página pública, prevalecem site oficial, TotalPass e CNPJ, que apontam Rua São Firmino, 88, sala 1.
 
-## Direção visual
+## Divergências e decisões
 
-A fotografia é uma cena representativa gerada para a direção esportiva e não registra a instalação real.
+- A planilha chama o projeto de “Studio M2”, informa Jacutinga/MG e o número +55 35 9707-0689, mas o endereço recebido está em Joinville. O site oficial, a TotalPass e o cadastro empresarial ligam o endereço à Lótus Pilates; a identidade oficial prevalece.
+- Diretórios antigos ainda apontam Rua Joaquim Girardi. O endereço atual do site oficial, Rua São Firmino, foi mantido.
+- Fisioterapia não é anunciada para esta unidade. Horários e avaliações específicas não foram publicados por falta de confirmação inequívoca.
+- A fotografia é representativa e não registra a instalação real.
+- A revisão visual de 21/09/2026 preservou a direção esportiva aprovada e manteve Pilates como único serviço anunciado para a unidade.
 

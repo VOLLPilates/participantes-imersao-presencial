@@ -1,30 +1,30 @@
 # VOLL Pilates Studio São Luís — Parque Shalon
 
-Revisão realizada em 17 de setembro de 2026.
+Revisão realizada em 21 de setembro de 2026.
 
 ## Dados publicados
 
 - Endereço: Avenida da Paz, 15, Quadra 04, Parque Shalon, São Luís/MA, CEP 65072-570.
-- WhatsApp: +55 98 99176-6746.
-- Serviço confirmado: Pilates.
-- Wellhub: Pilates a partir do plano Silver+, horários e comodidades publicadas.
-- Horários: segunda a quinta, 7h–12h e 15h–21h; sexta, 15h–21h; sábado e domingo fechados.
-- Comodidades: ar-condicionado, armários, chuveiro, vestiário, Wi-Fi, fisioterapeuta e nutricionista.
+- Telefone e WhatsApp comercial: +55 98 99176-6746.
+- Instagram oficial: https://www.instagram.com/vollstudiosaoluis/
+- Horários do Google Business: segunda a sexta, 7h–12h e 15h–21h; sábado e domingo fechados.
+- Wellhub: Pilates a partir do plano Silver+ e comodidades publicadas.
+- TotalPass: Pilates funcional, solo, clínico e studio para a unidade exata.
+- Avaliações exibidas: Caroline Vieira, Beatriz Cutrim e Tereza Cristina Abreu, com atribuição ao Google.
 
 ## Fontes
 
+- Google Business: https://www.google.com/search?q=Voll+Pilates+Studio+S%C3%A3o+Lu%C3%ADs+MA — telefone, horário, Instagram e avaliações.
 - Wellhub da unidade: https://wellhub.com/pt-br/search/partners/voll-pilates-slz/
+- TotalPass da unidade: https://totalpass.com/br/academias/voll-studios-sao-luis-ma/
 - Rede VOLL: https://vollpilates.com.br/aulas-de-pilates/
-- Instagram informado: https://www.instagram.com/vollstudiosaoluis/
 
-## Itens removidos
+## Divergências e decisões
 
-- TotalPass, porque não foi localizada uma página pública inequívoca para esta unidade.
-- Nota e volume de avaliações, porque a fonte encontrada era um perfil não reivindicado em agregador.
-- “Aula experimental”, porque a oferta não foi confirmada em fonte oficial.
-- Depoimentos públicos e ilustrações provisórias.
-
-## Direção visual
-
-A fotografia foi gerada como imagem institucional representativa. Ela não documenta a instalação, profissionais ou alunos reais da unidade.
+- A planilha informa +55 98 98119-3365; o Google Business vincula +55 98 99176-6746 à unidade.
+- A Wellhub anteriormente mostrava sexta apenas à tarde; o Google Business informa os dois turnos de segunda a sexta. A grade do Google foi adotada e deve ser confirmada antes da visita.
+- A TotalPass passou a ser exibida após localização da página específica no endereço da unidade.
+- “Aula experimental”, nota e volume não confirmados continuam fora da página. Avaliações permanecem fora do JSON-LD.
+- A fotografia é representativa e não documenta a instalação ou os profissionais.
+- A faixa inicial passou a mostrar, sem rolagem adicional, o horário publicado e os acessos confirmados por Wellhub e TotalPass.
 

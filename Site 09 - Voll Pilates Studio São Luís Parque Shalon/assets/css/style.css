@@ -234,7 +234,7 @@ h3 {
   margin: 1rem 0 1.4rem;
   font-size: clamp(3.5rem, 6vw, 5.2rem);
   line-height: 0.95;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .hero-content > span {
@@ -290,7 +290,7 @@ h3 {
 
 .contact-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.2fr .8fr 1fr 1.2fr;
   padding-inline: clamp(1rem, 5vw, 6rem);
   background: var(--teal-dark);
   color: var(--white);
@@ -353,7 +353,7 @@ h3 {
   margin: 0;
   font-size: clamp(2.8rem, 5.5vw, 5.6rem);
   line-height: 1;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 .studio-copy {
@@ -569,6 +569,44 @@ h3 {
   background: var(--coral);
   color: #24110e;
 }
+.reviews {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(2rem, 6vw, 7rem);
+  padding: clamp(5rem, 8vw, 8rem);
+  background: var(--white);
+}
+.reviews header > p {
+  color: var(--coral);
+  font-weight: 750;
+}
+.reviews h2 {
+  font-size: clamp(2.7rem, 5vw, 5rem);
+  line-height: 1;
+}
+.reviews header a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+}
+.reviews blockquote {
+  margin: 0;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
+  font-size: 1.2rem;
+}
+.reviews blockquote:last-child {
+  border-bottom: 1px solid var(--line);
+}
+.reviews cite {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--teal-dark);
+  font-size: 0.85rem;
+  font-style: normal;
+  font-weight: 750;
+}
 
 .contact-copy,
 .contact address {
@@ -719,6 +757,7 @@ summary:focus-visible {
   .schedule,
   .wellhub,
   .faq,
+  .reviews,
   .contact {
     grid-template-columns: 1fr;
   }
@@ -733,6 +772,16 @@ summary:focus-visible {
 
   .wellhub > div:first-child {
     min-height: 22rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .contact-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-strip > div:nth-child(2) {
+    border-right: 0;
   }
 }
 
