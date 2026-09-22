@@ -1,0 +1,195 @@
+.seo-deep {
+  padding: clamp(3.5rem, 7vw, 6rem) max(6vw, 24px);
+  background: var(--seo-bg, #f7f7f2);
+  color: var(--seo-ink, inherit);
+}
+
+.seo-deep a {
+  color: inherit;
+  text-underline-offset: 0.25em;
+}
+
+.seo-deep__inner {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.seo-deep__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: end;
+  margin-bottom: clamp(1.8rem, 4vw, 3rem);
+}
+
+.seo-deep__eyebrow,
+.seo-deep__kicker {
+  margin: 0 0 0.75rem;
+  color: var(--seo-accent, currentColor);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.seo-deep h2 {
+  margin: 0;
+  color: var(--seo-heading, inherit);
+  font-size: clamp(2rem, 4.8vw, 4.2rem);
+  line-height: 1;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.seo-deep__lead {
+  margin: 0;
+  color: var(--seo-muted, color-mix(in srgb, currentColor 70%, transparent));
+  font-size: clamp(1.02rem, 1.8vw, 1.22rem);
+}
+
+.seo-deep__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.seo-deep__card,
+.seo-deep__source,
+.seo-deep__step {
+  border: 1px solid var(--seo-line, color-mix(in srgb, currentColor 18%, transparent));
+  border-radius: 8px;
+  background: var(--seo-panel, #fff);
+  padding: clamp(1.1rem, 2vw, 1.45rem);
+}
+
+.seo-deep__card h3,
+.seo-deep__step h3 {
+  margin: 0 0 0.65rem;
+  color: var(--seo-heading, inherit);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.08;
+}
+
+.seo-deep__card p,
+.seo-deep__step p,
+.seo-deep__source p,
+.seo-deep__list li {
+  color: var(--seo-muted, color-mix(in srgb, currentColor 70%, transparent));
+}
+
+.seo-deep__card p,
+.seo-deep__step p,
+.seo-deep__source p {
+  margin: 0;
+}
+
+.seo-deep__number {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+  color: var(--seo-accent, currentColor);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.seo-deep__split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.seo-deep__split .seo-deep__grid {
+  grid-template-columns: 1fr;
+}
+
+.seo-deep__list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.seo-deep__list li {
+  border-top: 1px solid var(--seo-line, color-mix(in srgb, currentColor 18%, transparent));
+  padding-top: 0.75rem;
+}
+
+.seo-deep__source {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+}
+
+.seo-deep__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.seo-deep__cta a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--seo-accent, currentColor);
+  border-radius: 999px;
+  padding: 0.72rem 1rem;
+  color: var(--seo-accent, currentColor);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.analysis-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.analysis-block figure {
+  margin: 0;
+}
+
+.analysis-block__notes {
+  position: sticky;
+  top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.analysis-note {
+  border: 1px solid var(--line, #d9e0ee);
+  border-radius: 8px;
+  background: var(--panel, #fff);
+  padding: 1rem;
+}
+
+.analysis-note h2,
+.analysis-note h3 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.12;
+}
+
+.analysis-note p {
+  margin: 0;
+  color: var(--muted, #5d6b84);
+}
+
+@media (max-width: 840px) {
+  .seo-deep__intro,
+  .seo-deep__split,
+  .analysis-block {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-deep__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-block__notes {
+    position: static;
+  }
+}
