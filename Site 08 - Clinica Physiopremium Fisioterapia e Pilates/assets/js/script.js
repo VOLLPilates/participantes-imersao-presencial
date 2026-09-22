@@ -1,24 +1,53 @@
-const tabs = [...document.querySelectorAll('[role="tab"]')];
-tabs.forEach((tab, i) => {
-  tab.addEventListener("click", () => activate(tab));
-  tab.addEventListener("keydown", (e) => {
-    if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
-    e.preventDefault();
-    const next =
-      (i + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
-    tabs[next].focus();
-    activate(tabs[next]);
-  });
-});
-function activate(tab) {
-  tabs.forEach((t) => {
-    const selected = t === tab;
-    t.setAttribute("aria-selected", String(selected));
-    t.tabIndex = selected ? 0 : -1;
-    document.getElementById(t.getAttribute("aria-controls")).hidden = !selected;
-  });
-}
+(function () {
+  "use strict";
+  window.__studioSiteJsReady = true;
 
-tabs.forEach((tab) => {
-  tab.tabIndex = tab.getAttribute("aria-selected") === "true" ? 0 : -1;
-});
+  var toggles = [
+    { button: document.getElementById("burger"), menu: document.getElementById("menu"), className: "is-open" },
+    { button: document.getElementById("menuToggle"), menu: document.getElementById("navMobile"), className: "open" },
+    { button: document.querySelector("[data-menu-button]"), menu: document.getElementById("main-nav"), className: "is-open" }
+  ];
+
+  function setMenu(item, open) {
+    if (!item.button || !item.menu) return;
+    item.button.setAttribute("aria-expanded", String(open));
+    item.button.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    item.button.classList.toggle("open", open);
+    item.menu.classList.toggle(item.className, open);
+    document.body.classList.toggle("menu-open", open);
+  }
+
+  toggles.forEach(function (item) {
+    if (!item.button || !item.menu) return;
+    item.button.addEventListener("click", function () {
+      setMenu(item, item.button.getAttribute("aria-expanded") !== "true");
+    });
+    item.menu.addEventListener("click", function (event) {
+      if (event.target.closest("a")) setMenu(item, false);
+    });
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") toggles.forEach(function (item) { setMenu(item, false); });
+  });
+
+  var header = document.getElementById("header") || document.getElementById("nav") || document.querySelector("[data-header]");
+  function updateHeader() {
+    if (!header) return;
+    header.classList.toggle("scrolled", window.scrollY > 20);
+    header.classList.toggle("is-stuck", window.scrollY > 8);
+    header.classList.toggle("is-scrolled", window.scrollY > 24);
+  }
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
+
+  document.querySelectorAll(".reveal").forEach(function (element) {
+    element.classList.add("is-in", "visible");
+  });
+
+  document.querySelectorAll("[data-year]").forEach(function (element) {
+    element.textContent = String(new Date().getFullYear());
+  });
+  var year = document.getElementById("ano");
+  if (year) year.textContent = String(new Date().getFullYear());
+})();

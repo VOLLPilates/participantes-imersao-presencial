@@ -2,6 +2,10 @@
 
 Revisão realizada em 17 de setembro de 2026. Revisões complementares em 21 de setembro de 2026 e 22 de setembro de 2026.
 
+## Consolidação dos Sites 05 e 06
+
+Em 22 de setembro de 2026, a organização confirmou que os cadastros dos Sites 05 e 06 pertencem às duas sócias do mesmo Studio M2. O projeto público foi consolidado neste diretório, mantendo somente os dados confirmados da unidade de Jacutinga. O antigo Site 05 foi removido da galeria para evitar duplicidade e a relação societária permanece registrada apenas como contexto interno.
+
 ## Dados publicados
 
 - Endereço: Rua Santo Antônio, 766, Centro, Jacutinga/MG, CEP 37590-000.
