@@ -28,7 +28,7 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 ## 🌐 Links Directos e Presença Digital
 * 📍 **Link do Studio no Google Business / Google Maps:** [Rama Pilates e Fisioterapia por Priscila Castro](https://www.google.com/maps/search/?api=1&query=Rama%20Pilates%20e%20Fisioterapia%20Rua%20Antonio%20Correa%20Junior%20201%20Uberlandia%20MG)
 * 📸 **Instagram Oficial:** https://instagram.com/ramapilates
-* 🌐 **Website Oficial:** https://instagram.com/ramapilates
+* 🌐 **Website Oficial em domínio próprio:** Não localizado. Diretórios públicos listam o Instagram como "site", mas isso não conta como domínio próprio.
 
 ### 🔗 Outras Páginas Encontradas na Internet:
 * [Local Treino - Guia Uberlândia](https://localtreino.com/fisioterapeutas-esportivos/uberlandia/line-up-pilates/)

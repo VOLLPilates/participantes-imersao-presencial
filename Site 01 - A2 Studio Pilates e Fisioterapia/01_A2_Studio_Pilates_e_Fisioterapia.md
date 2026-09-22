@@ -28,7 +28,7 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 ## 🌐 Links Directos e Presença Digital
 * 📍 **Link do Studio no Google Business / Google Maps:** [A2 Studio Pilates e Fisioterapia](https://www.google.com/maps/search/?api=1&query=A2%20Studio%20Pilates%20e%20Fisioterapia%20Avenida%20Hilton%20Souto%20Maior%205545%20Joao%20Pessoa%20PB)
 * 📸 **Instagram Oficial:** https://instagram.com/a2studiopilates
-* 🌐 **Website Oficial:** https://instagram.com/a2studiopilates
+* 🌐 **Website Oficial em domínio próprio:** Não localizado. Diretórios públicos listam o Instagram como "site", mas isso não conta como domínio próprio.
 
 ### 🔗 Outras Páginas Encontradas na Internet:
 * [Local Treino - Guia João Pessoa](https://localtreino.com/estudios-de-pilates/joao-pessoa/a2-studio-pilates-e-fisioterapia/)

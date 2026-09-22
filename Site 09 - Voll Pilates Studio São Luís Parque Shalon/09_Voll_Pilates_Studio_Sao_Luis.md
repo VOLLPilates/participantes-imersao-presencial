@@ -35,7 +35,7 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 ## 🌐 Links Directos e Presença Digital
 * 📍 **Link do Studio no Google Business / Google Maps:** [Voll Pilates Studio - São Luis - MA](https://www.google.com/maps/search/?api=1&query=Voll%20Pilates%20Studio%20Avenida%20da%20Paz%2015%20Parque%20Shalon%20Sao%20Luis%20MA)
 * 📸 **Instagram Oficial:** [Integração via franqueadora VOLL Pilates](https://www.instagram.com/vollstudiosaoluis/)
-* 🌐 **Website Oficial:** https://telu.app/ranking/br/fitness/pilates/sao-luis/parque-shalon/voll-pilates-studio-sao-luis-ma
+* 🌐 **Website Oficial em domínio próprio:** https://vollpilates.com.br/aulas-de-pilates/ — site da rede VOLL, não uma página exclusiva da unidade. A página da Telu é diretório e não conta como domínio próprio.
 
 ### 🔗 Outras Páginas Encontradas na Internet:
 * [Telu Ranking - Ficha do Studio](https://telu.app/ranking/br/fitness/pilates/sao-luis/parque-shalon/voll-pilates-studio-sao-luis-ma)

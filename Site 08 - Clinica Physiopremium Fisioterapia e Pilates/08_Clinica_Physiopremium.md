@@ -38,7 +38,7 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas.
 ## 🌐 Links Directos e Presença Digital
 * 📍 **Link do Studio no Google Business / Google Maps:** [Clinica Physiopremium](https://www.google.com/maps/search/?api=1&query=Clinica%20Physiopremium%20Rua%20Rio%20Branco%20335%20Ribeirao%20Preto%20SP)
 * 📸 **Instagram Oficial:** https://instagram.com/physiopremium
-* 🌐 **Website Oficial:** https://instagram.com/physiopremium
+* 🌐 **Website Oficial em domínio próprio:** Não localizado. Wellhub, TotalPass e Instagram não contam como domínio próprio.
 
 ### 🔗 Outras Páginas Encontradas na Internet:
 * [Wellhub (Gympass) - Perfil de Parceiro](https://wellhub.com/pt-br/search/partners/clinica-physiopremium-ipiranga-ribeirao-preto/)

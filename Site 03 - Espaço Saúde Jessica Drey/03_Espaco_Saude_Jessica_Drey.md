@@ -27,8 +27,8 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 
 ## 🌐 Links Directos e Presença Digital
 * 📍 **Link do Studio no Google Business / Google Maps:** [Espaço Saúde fisioterapia e pilates Jéssica Drey](https://www.google.com/maps/search/?api=1&query=Espaco%20Saude%20fisioterapia%20e%20pilates%20Jessica%20Drey%20Avenida%20Senador%20Levindo%20Coelho%203321%20Belo%20Horizonte%20MG)
-* 📸 **Instagram Oficial:** Divulgado via canais de agendamento e redes profissionais
-* 🌐 **Website Oficial:** https://sites.google.com/view/espacosaudejessicadrey
+* 📸 **Instagram Oficial:** Não confirmado em busca pública.
+* 🌐 **Website Oficial em domínio próprio:** Não localizado. O Google Sites informado no briefing não conta como domínio próprio.
 
 ### 🔗 Outras Páginas Encontradas na Internet:
 * [ClassPass - Perfil do Studio](https://classpass.pt/studios/espao-sade-pilates-jssica-drey-vale-do-jatoba-mangueiras)

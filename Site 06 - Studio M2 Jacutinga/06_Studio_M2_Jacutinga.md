@@ -36,7 +36,7 @@ Se não: vamos criar um site, com base nas cores e paleta de cores utilizadas. B
 ## 🌐 Links Directos e Presença Digital
 * 📍 **Link do Studio no Google Business / Google Maps:** [Studio M2 - Pilates, Neopilates e Treinamento de força](https://www.google.com/maps/search/?api=1&query=Studio%20M2%20Rua%20Santo%20Antonio%20766%20Jacutinga%20MG)
 * 📸 **Instagram Oficial:** https://instagram.com/studiom2_
-* 🌐 **Website Oficial:** https://instagram.com/studiom2_
+* 🌐 **Website Oficial em domínio próprio:** Não localizado. O Instagram é a principal presença pública confirmada.
 
 ### 🔗 Outras Páginas Encontradas na Internet:
 * [Infobel Diretório - Studio M2](https://www.infobel.com/pt/brazil/studio_pilates_fisioterapia_avenida/ouro_fino/BR112509214-3536361888/businessdetails.aspx)
