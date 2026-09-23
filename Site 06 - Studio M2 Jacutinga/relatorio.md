@@ -43,7 +43,6 @@ O vínculo entre Site 05 e Site 06 deve ser tratado como indício forte de brief
 - A planilha informa +55 35 99113-9194; o Google Business vincula +55 35 99115-0352 ao Studio M2. O telefone comercial público foi mantido.
 - “13 anos” continua fora da página por não ter sido confirmado em fonte oficial.
 - Avaliações aparecem somente no conteúdo visível, sem dados estruturados de avaliação.
-- A imagem do hero é representativa e não registra a instalação real.
 - O logotipo e o favicon fornecidos pela organização foram aplicados em 21/09/2026.
-- A identidade visual foi refeita em preto, roxo e lavanda a partir da marca; a fotografia continua identificada como representativa.
+- A identidade visual foi refeita em preto, roxo e lavanda a partir da marca.
 

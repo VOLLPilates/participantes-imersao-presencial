@@ -124,6 +124,10 @@ img {
   transition: transform 500ms var(--ease);
 }
 
+.project--double {
+  grid-column: 1 / -1;
+}
+
 .project__project-link {
   display: block;
   color: inherit;
@@ -170,6 +174,14 @@ img {
   transition:
     transform 700ms var(--ease),
     filter 350ms var(--ease);
+}
+
+.project--double .project__media {
+  aspect-ratio: 21 / 8;
+}
+
+.project--double .project__media img {
+  object-position: center top;
 }
 
 .project__media.is-missing img {
@@ -333,6 +345,13 @@ img {
   .project-grid {
     grid-template-columns: 1fr;
     gap: 3.5rem;
+  }
+  .project--double {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .project--double .project__media {
+    aspect-ratio: 16 / 10;
   }
   .project__body {
     grid-template-columns: 1fr;
