@@ -39,14 +39,18 @@ body.analysis--jessica {
 }
 
 body.analysis--lotus {
-  --bg: #10271f;
-  --surface: #173227;
-  --surface-strong: #1f4032;
-  --ink: #f7ffef;
-  --muted: #bed1c2;
-  --line: rgba(247, 255, 239, 0.18);
-  --accent: #b7d84b;
-  --accent-ink: #132414;
+  --bg: #24112f;
+  --surface: #351547;
+  --surface-strong: #4a1e5e;
+  --ink: #fff9ea;
+  --muted: #d8cce0;
+  --line: rgba(255, 249, 234, 0.18);
+  --accent: #dfc990;
+  --accent-ink: #24112f;
+  --good: #37a6b4;
+  --good-bg: rgba(55, 166, 180, 0.14);
+  --avg: #dfc990;
+  --avg-bg: rgba(223, 201, 144, 0.16);
 }
 
 * {
@@ -330,7 +334,7 @@ h3 {
 
 .summary-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: -2.3rem;
+  margin-top: 0;
   margin-bottom: clamp(4rem, 8vw, 7rem);
 }
 
@@ -388,6 +392,53 @@ h3 {
 
 .score-board {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.score-legend,
+.impact-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.score-legend {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 1rem;
+}
+
+.legend-item,
+.impact-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.legend-item {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 720;
+}
+
+.legend-item::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  content: "";
+}
+
+.legend-item.is-good::before {
+  background: var(--good);
+}
+
+.legend-item.is-avg::before {
+  background: var(--avg);
+}
+
+.legend-item.is-bad::before {
+  background: var(--bad);
 }
 
 .score-card {
@@ -464,6 +515,44 @@ h3 {
 
 .metric-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.impact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1rem;
+}
+
+.impact-card {
+  min-height: 150px;
+  padding: 1rem;
+}
+
+.impact-card span {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  width: fit-content;
+  padding: 0 0.65rem;
+  margin-bottom: 0.9rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.impact-card strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--ink);
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.impact-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .metric-card {
@@ -632,6 +721,7 @@ h3 {
   width: min(var(--content), 100%);
   flex-wrap: wrap;
   gap: 1rem 1.4rem;
+  justify-content: center;
   margin-inline: auto;
   padding-top: 1.35rem;
   border-top: 1px solid var(--line);
@@ -653,7 +743,9 @@ h3 {
   }
 
   .summary-grid,
+  .score-legend,
   .metric-grid,
+  .impact-grid,
   .issues-grid,
   .fixed-grid,
   .evidence-gallery {
@@ -674,7 +766,9 @@ h3 {
 
   .summary-grid,
   .score-board,
+  .score-legend,
   .metric-grid,
+  .impact-grid,
   .issues-grid,
   .fixed-grid,
   .evidence-gallery {

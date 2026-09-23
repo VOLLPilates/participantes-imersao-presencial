@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Análise de SEO e Performance | Lótus FisioPilates</title>
-  <meta name="description" content="Auditoria de SEO, performance (PageSpeed Insights) e recomendações de melhoria para o site oficial da Lótus FisioPilates." />
+  <title>Análise do Site Atual | Lótus FisioPilates</title>
+  <meta name="description" content="Análise visual, SEO, performance e recomendações de melhoria para o site oficial da Lótus FisioPilates." />
   <link rel="icon" type="image/png" href="./assets/img/favicon_lotus-fisioterapia.png" />
   <link rel="stylesheet" href="../assets/analysis-report.css" />
 </head>
@@ -15,263 +15,36 @@
     <div class="analysis-shell">
       <nav class="analysis-nav" aria-label="Navegação da análise">
         <a class="analysis-back" href="../index.html">Voltar para a galeria</a>
-        <span class="analysis-status">Auditoria feita em 22/09/2026</span>
       </nav>
 
       <div class="analysis-hero__grid">
         <div>
           <p class="kicker">Análise do site existente</p>
-          <h1>SEO e performance antes de publicar</h1>
-          <p class="analysis-lead">Auditoria do site oficial da Lótus, lotuspilatesjlle.com.br, comparando os gargalos de performance e acessibilidade com a nova versão estática da unidade Anita Garibaldi.</p>
+          <h1>O que o site atual revela</h1>
+          <p class="analysis-lead">Uma leitura simples do site oficial da Lótus: como ele se apresenta hoje, onde perde velocidade no celular e como a nova versão estática da unidade Anita Garibaldi pode comunicar melhor.</p>
           <div class="hero-actions">
-            <a class="analysis-button analysis-button--primary" href="./index.html">Abrir projeto novo</a>
+            <a class="analysis-button analysis-button--primary" href="./index.html">Ver nova proposta</a>
             <a class="analysis-button" href="https://lotuspilatesjlle.com.br/" target="_blank" rel="noopener">Site oficial da Lótus</a>
           </div>
         </div>
 
         <aside class="hero-note" aria-label="Resumo rápido da auditoria">
-          <p><strong>Principal gargalo</strong> O site oficial transfere cerca de 4 MB no celular e o maior elemento visível aparece em 5,4s.</p>
-          <p><strong>Ponto forte</strong> SEO está em 100/100 no celular e no computador, então o trabalho é preservar esse ganho enquanto reduz peso.</p>
-          <p><strong>Leitura executiva</strong> A nova versão já resolve a base técnica, mas ainda precisa refinar imagens, metadados sociais, mapa e mensuração.</p>
+          <p><strong>Em uma frase</strong> O site oficial tem bom SEO, mas carrega pesado no celular e pode perder visitantes antes da mensagem principal aparecer.</p>
+          <p><strong>Principal gargalo</strong> A página transfere cerca de 4 MB no celular.</p>
+          <p><strong>Oportunidade</strong> Preservar a autoridade da marca com uma página mais leve, local e direta para a unidade Anita Garibaldi.</p>
         </aside>
       </div>
     </div>
   </header>
 
   <main id="conteudo" class="analysis-shell">
-    <section class="summary-grid" aria-label="Resumo executivo">
-      <article class="summary-card">
-        <p class="card-kicker">Risco principal</p>
-        <strong>Carregamento mobile pesado</strong>
-        <p>O desempenho fica em 71/100 no celular, com 4.070 KiB transferidos e LCP de 5,4s.</p>
-      </article>
-      <article class="summary-card">
-        <p class="card-kicker">Ponto forte</p>
-        <strong>SEO já muito bem resolvido</strong>
-        <p>100/100 em SEO nos dois cenários. O desafio é manter estrutura sem carregar excesso visual e técnico.</p>
-      </article>
-      <article class="summary-card">
-        <p class="card-kicker">Próxima ação</p>
-        <strong>Comprimir fallback e fechar lacunas sociais</strong>
-        <p>Reduzir PNG pesado, remover TTFs sem uso e completar tags de compartilhamento.</p>
-      </article>
-    </section>
-
-    <section class="analysis-section" aria-labelledby="scores-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">Site atual · PageSpeed Insights</p>
-          <h2 id="scores-title">Os quatro números que o Google usa para avaliar</h2>
-        </div>
-        <p>Cada nota vai de 0 a 100. Verde é bom (90+), amarelo é mediano (50-89), vermelho precisa de atenção (abaixo de 50). O SEO já está ótimo nos dois cenários; o gargalo real é desempenho no celular.</p>
-      </div>
-
-      <div class="score-board">
-        <article class="score-card">
-          <div class="score-card__head">
-            <strong>Celular</strong>
-            <span>conexão 4G simulada</span>
-          </div>
-          <div class="score-row">
-            <div class="score-chip score-avg"><strong>71</strong><span>Desempenho</span></div>
-            <div class="score-chip score-avg"><strong>81</strong><span>Acessibilidade</span></div>
-            <div class="score-chip score-good"><strong>100</strong><span>Boas práticas</span></div>
-            <div class="score-chip score-good"><strong>100</strong><span>SEO</span></div>
-          </div>
-        </article>
-
-        <article class="score-card">
-          <div class="score-card__head">
-            <strong>Computador</strong>
-            <span>conexão banda larga</span>
-          </div>
-          <div class="score-row">
-            <div class="score-chip score-good"><strong>94</strong><span>Desempenho</span></div>
-            <div class="score-chip score-avg"><strong>86</strong><span>Acessibilidade</span></div>
-            <div class="score-chip score-good"><strong>100</strong><span>Boas práticas</span></div>
-            <div class="score-chip score-good"><strong>100</strong><span>SEO</span></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="analysis-section" aria-labelledby="vitals-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">Core Web Vitals · laboratório</p>
-          <h2 id="vitals-title">A experiência de carregamento, em números</h2>
-        </div>
-        <p>O site tem pouco tráfego para gerar dados reais de usuários no CrUX, então o PageSpeed usa simulação de laboratório. No celular o maior elemento da tela demora 5,4s para aparecer; no computador, 1s.</p>
-      </div>
-
-      <div class="metric-grid">
-        <article class="metric-card is-bad">
-          <span class="tag tag-bad">Celular ruim</span>
-          <strong>5,4s</strong>
-          <span>LCP · maior elemento visível</span>
-          <p>No computador, o mesmo indicador fica em 1,0s.</p>
-        </article>
-        <article class="metric-card is-avg">
-          <span class="tag tag-avg">Celular mediano</span>
-          <strong>3,0s</strong>
-          <span>FCP · primeira coisa visível</span>
-          <p>No computador, a primeira pintura aparece em 0,6s.</p>
-        </article>
-        <article class="metric-card is-good">
-          <span class="tag tag-good">Sem travamento</span>
-          <strong>0ms</strong>
-          <span>TBT · página travada para interação</span>
-          <p>No computador, o TBT também foi 0ms.</p>
-        </article>
-        <article class="metric-card is-good">
-          <span class="tag tag-good">Estável</span>
-          <strong>0</strong>
-          <span>CLS · elementos que pulam</span>
-          <p>No computador, o deslocamento visual também foi 0.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="analysis-section" aria-labelledby="issues-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">Maiores gargalos no celular</p>
-          <h2 id="issues-title">Por que o carregamento no celular é mais lento</h2>
-        </div>
-        <p>O peso total da página no celular é 4.070 KiB, cerca de 4 MB. Para uma landing page, cada MB adicional custa segundos em conexão 4G.</p>
-      </div>
-
-      <div class="issues-grid">
-        <article class="issue-card">
-          <div class="issue-card__meta"><h3>Ciclo de vida de cache</h3><span class="issue-card__saving">4.035 KiB</span></div>
-          <p>Arquivos que poderiam ficar salvos no navegador do visitante não têm regra de cache configurada.</p>
-        </article>
-        <article class="issue-card">
-          <div class="issue-card__meta"><h3>Solicitações bloqueando renderização</h3><span class="issue-card__saving">1.970 ms</span></div>
-          <p>Quase 2 segundos perdidos com scripts e estilos que o navegador precisa baixar antes de mostrar qualquer coisa.</p>
-        </article>
-        <article class="issue-card">
-          <div class="issue-card__meta"><h3>Entrega de imagens</h3><span class="issue-card__saving">555 KiB</span></div>
-          <p>Imagens maiores ou menos comprimidas do que o necessário para o tamanho exibido em tela.</p>
-        </article>
-        <article class="issue-card avg">
-          <div class="issue-card__meta"><h3>Exibição de fontes</h3><span class="issue-card__saving">740 ms</span></div>
-          <p>Texto potencialmente invisível enquanto a fonte customizada carrega, sem <code>font-display: swap</code>.</p>
-        </article>
-        <article class="issue-card avg">
-          <div class="issue-card__meta"><h3>CSS não usado</h3><span class="issue-card__saving">369 KiB</span></div>
-          <p>Boa parte do CSS carregado não se aplica a essa página específica.</p>
-        </article>
-        <article class="issue-card avg">
-          <div class="issue-card__meta"><h3>Peso total da página</h3><span class="issue-card__saving">4.070 KiB</span></div>
-          <p>Cerca de 4 MB transferidos — cada MB a mais custa segundos em conexão 4G.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="analysis-section" aria-labelledby="a11y-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">Acessibilidade</p>
-          <h2 id="a11y-title">Onde o site atual perde pontos com leitores de tela</h2>
-        </div>
-        <p>A nota fica em 81 no celular e 86 no computador. Os achados são simples de corrigir na versão estática.</p>
-      </div>
-
-      <div class="issues-grid">
-        <article class="issue-card">
-          <div class="issue-card__meta"><h3>Botões sem nome acessível</h3></div>
-          <p>Controles que um leitor de tela não consegue anunciar corretamente, como botão de menu sem <code>aria-label</code>.</p>
-        </article>
-        <article class="issue-card">
-          <div class="issue-card__meta"><h3>Links sem nome compreensível</h3></div>
-          <p>Textos de link genéricos como "clique aqui", que não dizem para onde o link leva fora de contexto.</p>
-        </article>
-        <article class="issue-card">
-          <div class="issue-card__meta"><h3>Links de salto não focalizáveis</h3></div>
-          <p>O link "pular para o conteúdo" não recebe foco de teclado corretamente.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="analysis-section" aria-labelledby="fixed-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">Nova versão estática</p>
-          <h2 id="fixed-title">O que a reconstrução já resolve de fábrica</h2>
-        </div>
-        <p>A nova versão remove a base genérica do site oficial e mantém o que importa: conteúdo local, estrutura clara e assets controlados.</p>
-      </div>
-
-      <div class="fixed-grid">
-        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>HTML enxuto, sem plataforma de terceiros</strong><p>Sem builder genérico carregando scripts que essa página nunca usa.</p></div></article>
-        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Imagem do hero em WebP com fallback</strong><p>121 KB em vez de possíveis megabytes, servida via <code>&lt;picture&gt;</code>.</p></div></article>
-        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Todos os links com texto descritivo</strong><p>"Consultar horários" e "Falar com a equipe", sem "clique aqui".</p></div></article>
-        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Skip link presente e funcional</strong><p>Primeiro elemento focável da página, corrigindo o problema de foco do site atual.</p></div></article>
-        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Dados estruturados duplos</strong><p><code>["Physiotherapy","ExerciseGym"]</code> e <code>FAQPage</code>, sustentados pela fonte oficial da Lótus.</p></div></article>
-        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Fontes com <code>font-display: swap</code></strong><p>Texto visível imediatamente, sem esperar a fonte Manrope carregar.</p></div></article>
-      </div>
-    </section>
-
-    <section class="analysis-section" aria-labelledby="todo-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">Pendências reais</p>
-          <h2 id="todo-title">O que ainda falta ajustar nesta pasta</h2>
-        </div>
-        <p>Itens específicos, verificados nos arquivos do projeto — não recomendações genéricas.</p>
-      </div>
-
-      <div class="priority-list">
-        <article class="priority-card"><div><strong>PNG de fallback do hero pesa 2,1 MB</strong><p><code>hero-lotus-anita.png</code> só é servido para navegadores sem suporte a WebP, mas ainda assim vale comprimir. Ele é 17x mais pesado que a versão WebP de 121 KB.</p></div></article>
-        <article class="priority-card"><div><strong>2 arquivos <code>.ttf</code> sem uso, cerca de 190 KB</strong><p>O CSS só referencia os <code>.woff2</code> via <code>@font-face</code>. Os <code>.ttf</code> em <code>assets/fonts/</code> não são carregados por nenhum navegador.</p></div></article>
-        <article class="priority-card"><div><strong>Botão do menu mobile precisa de <code>aria-label</code> explícito</strong><p>Mesmo achado de acessibilidade do site oficial: vale conferir se o toggle do menu em <code>script.js</code> anuncia "abrir/fechar menu" para leitor de tela.</p></div></article>
-        <article class="priority-card"><div><strong>Sem <code>og:image:width</code>/<code>og:image:height</code> nem <code>twitter:card</code></strong><p>Só há <code>og:type</code>, <code>og:title</code> e <code>og:image</code>. Um link compartilhado no WhatsApp pode não mostrar o preview correto.</p></div></article>
-        <article class="priority-card"><div><strong>Depoimentos fora do JSON-LD, por decisão deliberada</strong><p>O <code>relatorio.md</code> já registra isso como escolha consciente, evitando exagero de <code>AggregateRating</code> sem confirmação de nota real. Manter assim.</p></div></article>
-      </div>
-    </section>
-
-    <section class="analysis-section" aria-labelledby="seo-tips-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">Recomendações de SEO</p>
-          <h2 id="seo-tips-title">Para reforçar o ranqueamento local</h2>
-        </div>
-        <p>Itens que ainda não existem no projeto, além dos pontos listados em pendências.</p>
-      </div>
-
-      <div class="priority-list">
-        <article class="priority-card"><div><strong>Sem <code>&lt;link rel="canonical"&gt;</code></strong><p>Quando o domínio final for definido, adicionar URL canônica evita problemas de conteúdo duplicado, como acesso com e sem <code>www</code>.</p></div></article>
-        <article class="priority-card"><div><strong>Sem <code>og:locale</code> nem <code>og:url</code></strong><p>Faltam essas tags Open Graph para identificar idioma <code>pt_BR</code> e URL oficial ao gerar o preview do link.</p></div></article>
-        <article class="priority-card"><div><strong>Sem <code>robots.txt</code> nem <code>sitemap.xml</code></strong><p>Antes de publicar no domínio final, vale criar os dois para ajudar o Google a rastrear e indexar mais rápido.</p></div></article>
-        <article class="priority-card"><div><strong>Mapa aponta para busca genérica, não para o perfil do Google Business</strong><p>O botão "Abrir no mapa" usa <code>google.com/maps/search/?api=1&query=...</code>. Se existir o Place ID da unidade Anita Garibaldi, o link direto tende a casar melhor com o Local Pack.</p></div></article>
-      </div>
-    </section>
-
-    <section class="analysis-section" aria-labelledby="general-tips-title">
-      <div class="section-head">
-        <div>
-          <p class="section-kicker">Melhorias gerais</p>
-          <h2 id="general-tips-title">Além de SEO e performance</h2>
-        </div>
-        <p>Ajustes de contato, mensuração e confiança que ajudam a transformar o tráfego em conversas reais.</p>
-      </div>
-
-      <div class="priority-list">
-        <article class="priority-card"><div><strong>Sem link <code>tel:</code></strong><p>Todo contato direciona para o WhatsApp. Adicionar <code>&lt;a href="tel:+5547992897343"&gt;</code> ajuda quem prefere ligar direto.</p></div></article>
-        <article class="priority-card"><div><strong>Sem medição de clique nos CTAs de WhatsApp</strong><p>A página tem 3 links de WhatsApp diferentes e nenhum Analytics ou Tag Manager configurado. Sem isso, não dá para saber qual raia converte mais.</p></div></article>
-        <article class="priority-card"><div><strong>Nota e quantidade de avaliações do Google ainda não confirmadas</strong><p>O <code>relatorio.md</code> não traz nota/contagem do Google Business da unidade. Antes de exibir qualquer selo no Google, confirmar o número real.</p></div></article>
-        <article class="priority-card"><div><strong>Sem aviso de privacidade no rodapé</strong><p>O site direciona contato via WhatsApp, que coleta nome e telefone da conversa. Um link curto de política de privacidade no rodapé é uma boa prática.</p></div></article>
-      </div>
-    </section>
-
     <section class="analysis-section" aria-labelledby="capture-title">
       <div class="section-head">
         <div>
           <p class="section-kicker">Referência visual</p>
           <h2 id="capture-title">Como o site oficial se apresenta</h2>
         </div>
-        <p>Capturas usadas como referência para linguagem, estrutura e conteúdo institucional da Lótus.</p>
+        <p>Primeiro, a referência: esta é a comunicação atual que o visitante encontra antes de qualquer proposta nova.</p>
       </div>
 
       <div class="evidence-gallery">
@@ -289,13 +62,249 @@
         </figure>
       </div>
     </section>
+
+    <section class="summary-grid" aria-label="Resumo executivo">
+      <article class="summary-card">
+        <p class="card-kicker">Diagnóstico</p>
+        <strong>SEO forte, mas experiência pesada no celular</strong>
+        <p>O site já é bem entendido pelo Google, mas ainda demora mais do que deveria para abrir em conexões móveis.</p>
+      </article>
+      <article class="summary-card">
+        <p class="card-kicker">Impacto</p>
+        <strong>O visitante espera antes de conhecer a clínica</strong>
+        <p>O maior elemento da tela aparece em 5,4s no celular, tempo alto para uma landing page.</p>
+      </article>
+      <article class="summary-card">
+        <p class="card-kicker">Oportunidade</p>
+        <strong>Manter autoridade com uma página mais direta</strong>
+        <p>A nova versão pode preservar a força da marca e focar a mensagem na unidade Anita Garibaldi.</p>
+      </article>
+    </section>
+
+    <section class="analysis-section" aria-labelledby="scores-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Site atual · PageSpeed Insights</p>
+          <h2 id="scores-title">As notas gerais do Google</h2>
+        </div>
+        <p>O Google dá notas de 0 a 100. Para uma apresentação simples: verde está bom, amarelo pede atenção e vermelho indica problema que pode atrapalhar a experiência.</p>
+      </div>
+
+      <div class="score-legend" aria-label="Legenda das notas">
+        <span class="legend-item is-good">Bom: 90 ou mais</span>
+        <span class="legend-item is-avg">Atenção: 50 a 89</span>
+        <span class="legend-item is-bad">Crítico: abaixo de 50</span>
+      </div>
+
+      <div class="score-board">
+        <article class="score-card">
+          <div class="score-card__head">
+            <strong>Celular</strong>
+            <span>simulação em conexão móvel</span>
+          </div>
+          <div class="score-row">
+            <div class="score-chip score-avg"><strong>71</strong><span>Velocidade</span></div>
+            <div class="score-chip score-avg"><strong>81</strong><span>Acessibilidade</span></div>
+            <div class="score-chip score-good"><strong>100</strong><span>Boas práticas</span></div>
+            <div class="score-chip score-good"><strong>100</strong><span>SEO</span></div>
+          </div>
+        </article>
+
+        <article class="score-card">
+          <div class="score-card__head">
+            <strong>Computador</strong>
+            <span>simulação em banda larga</span>
+          </div>
+          <div class="score-row">
+            <div class="score-chip score-good"><strong>94</strong><span>Velocidade</span></div>
+            <div class="score-chip score-avg"><strong>86</strong><span>Acessibilidade</span></div>
+            <div class="score-chip score-good"><strong>100</strong><span>Boas práticas</span></div>
+            <div class="score-chip score-good"><strong>100</strong><span>SEO</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="analysis-section" aria-labelledby="vitals-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Core Web Vitals</p>
+          <h2 id="vitals-title">O que a pessoa sente ao abrir o site</h2>
+        </div>
+        <p>Como há pouco tráfego para gerar dados reais de usuários, o PageSpeed usa uma simulação de laboratório. Ainda assim, ela mostra onde a experiência fica mais lenta.</p>
+      </div>
+
+      <div class="metric-grid">
+        <article class="metric-card is-bad">
+          <span class="tag tag-bad">Crítico</span>
+          <strong>5,4s</strong>
+          <span>Demora para a tela principal aparecer</span>
+          <p>Métrica técnica: LCP no celular. No computador, o mesmo indicador fica em 1,0s.</p>
+        </article>
+        <article class="metric-card is-avg">
+          <span class="tag tag-avg">Atenção</span>
+          <strong>3,0s</strong>
+          <span>Primeira coisa visível na tela</span>
+          <p>Métrica técnica: FCP no celular. No computador, aparece em 0,6s.</p>
+        </article>
+        <article class="metric-card is-good">
+          <span class="tag tag-good">Bom</span>
+          <strong>0ms</strong>
+          <span>Página sem travar</span>
+          <p>Métrica técnica: TBT. No celular e no computador, o resultado foi 0ms.</p>
+        </article>
+        <article class="metric-card is-good">
+          <span class="tag tag-good">Bom</span>
+          <strong>0</strong>
+          <span>Página estável</span>
+          <p>Métrica técnica: CLS. No celular e no computador, o resultado foi 0.</p>
+        </article>
+      </div>
+
+      <div class="impact-grid" aria-label="Impacto para o visitante">
+        <article class="impact-card"><span>Impacto</span><strong>O problema está no início da visita</strong><p>Depois que o site aparece, ele não trava. A questão é o tempo até a primeira impressão.</p></article>
+        <article class="impact-card"><span>Ponto positivo</span><strong>A base de SEO está forte</strong><p>Com SEO em 100/100, a nova página deve preservar a estrutura e reduzir peso.</p></article>
+        <article class="impact-card"><span>Direção</span><strong>Foco em leveza e clareza local</strong><p>A página da unidade não precisa carregar tudo que um site institucional completo carrega.</p></article>
+      </div>
+    </section>
+
+    <section class="analysis-section" aria-labelledby="issues-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Maiores gargalos no celular</p>
+          <h2 id="issues-title">O que deixa a página pesada</h2>
+        </div>
+        <p>O peso total da página no celular é 4.070 KiB, cerca de 4 MB. Para uma landing page, cada MB adicional custa segundos em conexão móvel.</p>
+      </div>
+
+      <div class="issues-grid">
+        <article class="issue-card">
+          <div class="issue-card__meta"><h3>Ciclo de vida de cache</h3><span class="issue-card__saving">4.035 KiB</span></div>
+          <p>Arquivos que poderiam ficar salvos no navegador do visitante não têm regra de cache configurada.</p>
+        </article>
+        <article class="issue-card">
+          <div class="issue-card__meta"><h3>Arquivos bloqueando a tela</h3><span class="issue-card__saving">1.970 ms</span></div>
+          <p>Quase 2 segundos perdidos com scripts e estilos que o navegador precisa baixar antes de mostrar qualquer coisa.</p>
+        </article>
+        <article class="issue-card">
+          <div class="issue-card__meta"><h3>Entrega de imagens</h3><span class="issue-card__saving">555 KiB</span></div>
+          <p>Imagens maiores ou menos comprimidas do que o necessário para o tamanho exibido em tela.</p>
+        </article>
+        <article class="issue-card avg">
+          <div class="issue-card__meta"><h3>Exibição de fontes</h3><span class="issue-card__saving">740 ms</span></div>
+          <p>Texto potencialmente invisível enquanto a fonte customizada carrega, sem <code>font-display: swap</code>.</p>
+        </article>
+        <article class="issue-card avg">
+          <div class="issue-card__meta"><h3>CSS não usado</h3><span class="issue-card__saving">369 KiB</span></div>
+          <p>Boa parte do CSS carregado não se aplica a essa página específica.</p>
+        </article>
+        <article class="issue-card avg">
+          <div class="issue-card__meta"><h3>Peso total da página</h3><span class="issue-card__saving">4.070 KiB</span></div>
+          <p>Cerca de 4 MB transferidos no celular.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="analysis-section" aria-labelledby="a11y-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Acessibilidade</p>
+          <h2 id="a11y-title">Pontos que dificultam a navegação assistida</h2>
+        </div>
+        <p>A nota fica em 81 no celular e 86 no computador. São ajustes importantes para quem usa leitor de tela ou navega pelo teclado.</p>
+      </div>
+
+      <div class="issues-grid">
+        <article class="issue-card">
+          <div class="issue-card__meta"><h3>Botões sem nome acessível</h3></div>
+          <p>Alguns controles não dizem claramente sua função para leitores de tela.</p>
+        </article>
+        <article class="issue-card">
+          <div class="issue-card__meta"><h3>Links sem nome compreensível</h3></div>
+          <p>Textos genéricos como "clique aqui" perdem sentido quando lidos fora de contexto.</p>
+        </article>
+        <article class="issue-card">
+          <div class="issue-card__meta"><h3>Links de salto sem foco adequado</h3></div>
+          <p>O recurso de pular direto para o conteúdo não recebe foco de teclado corretamente.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="analysis-section" aria-labelledby="fixed-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Nova versão estática</p>
+          <h2 id="fixed-title">O que a nova proposta já resolve</h2>
+        </div>
+        <p>A nova versão remove a base genérica do site oficial e mantém o que importa: conteúdo local, estrutura clara e assets controlados.</p>
+      </div>
+
+      <div class="fixed-grid">
+        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>HTML enxuto, sem plataforma de terceiros</strong><p>Sem builder genérico carregando scripts que essa página nunca usa.</p></div></article>
+        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Imagem do hero em WebP com fallback</strong><p>121 KB em vez de possíveis megabytes, servida via <code>&lt;picture&gt;</code>.</p></div></article>
+        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Links com texto descritivo</strong><p>"Consultar horários" e "Falar com a equipe", sem depender de "clique aqui".</p></div></article>
+        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Skip link presente e funcional</strong><p>Primeiro elemento focável da página, corrigindo o problema de foco do site atual.</p></div></article>
+        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Dados estruturados duplos</strong><p><code>["Physiotherapy","ExerciseGym"]</code> e <code>FAQPage</code>, sustentados pela fonte oficial da Lótus.</p></div></article>
+        <article class="fixed-card"><span class="fixed-card__mark">✓</span><div><strong>Texto aparece imediatamente</strong><p>Fontes com <code>font-display: swap</code>, sem esperar a fonte Manrope carregar.</p></div></article>
+      </div>
+    </section>
+
+    <section class="analysis-section" aria-labelledby="todo-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Pendências reais</p>
+          <h2 id="todo-title">O que ainda falta ajustar nesta pasta</h2>
+        </div>
+        <p>Itens específicos, verificados nos arquivos do projeto.</p>
+      </div>
+
+      <div class="priority-list">
+        <article class="priority-card"><div><strong>PNG de fallback do hero pesa 2,1 MB</strong><p><code>hero-lotus-anita.png</code> só é servido para navegadores sem suporte a WebP, mas ainda assim vale comprimir. Ele é 17x mais pesado que a versão WebP de 121 KB.</p></div></article>
+        <article class="priority-card"><div><strong>2 arquivos <code>.ttf</code> sem uso, cerca de 190 KB</strong><p>O CSS só referencia os <code>.woff2</code> via <code>@font-face</code>. Os <code>.ttf</code> em <code>assets/fonts/</code> não são carregados por nenhum navegador.</p></div></article>
+        <article class="priority-card"><div><strong>Botão do menu mobile precisa de nome acessível</strong><p>Vale conferir se o toggle do menu em <code>script.js</code> anuncia "abrir/fechar menu" para leitor de tela.</p></div></article>
+        <article class="priority-card"><div><strong>Preview de compartilhamento incompleto</strong><p>Só há <code>og:type</code>, <code>og:title</code> e <code>og:image</code>. Faltam dimensões de imagem e tags de Twitter Card.</p></div></article>
+        <article class="priority-card"><div><strong>Depoimentos fora do JSON-LD, por decisão deliberada</strong><p>O <code>relatorio.md</code> registra isso como escolha consciente, evitando exagero de <code>AggregateRating</code> sem confirmação de nota real.</p></div></article>
+      </div>
+    </section>
+
+    <section class="analysis-section" aria-labelledby="seo-tips-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Recomendações de SEO</p>
+          <h2 id="seo-tips-title">Para reforçar o ranqueamento local</h2>
+        </div>
+        <p>Próximos passos para o Google entender melhor a página e a unidade certa.</p>
+      </div>
+
+      <div class="priority-list">
+        <article class="priority-card"><div><strong>Sem <code>&lt;link rel="canonical"&gt;</code></strong><p>Quando o domínio final for definido, adicionar URL canônica evita problemas de conteúdo duplicado.</p></div></article>
+        <article class="priority-card"><div><strong>Sem <code>og:locale</code> nem <code>og:url</code></strong><p>Faltam essas tags Open Graph para identificar idioma <code>pt_BR</code> e URL oficial ao gerar o preview do link.</p></div></article>
+        <article class="priority-card"><div><strong>Sem <code>robots.txt</code> nem <code>sitemap.xml</code></strong><p>Antes de publicar no domínio final, vale criar os dois para ajudar o Google a rastrear e indexar mais rápido.</p></div></article>
+        <article class="priority-card"><div><strong>Mapa aponta para busca genérica</strong><p>O botão "Abrir no mapa" usa <code>google.com/maps/search/?api=1&query=...</code>. Se existir o Place ID da unidade Anita Garibaldi, o link direto tende a casar melhor com o Local Pack.</p></div></article>
+      </div>
+    </section>
+
+    <section class="analysis-section" aria-labelledby="general-tips-title">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Melhorias gerais</p>
+          <h2 id="general-tips-title">Além de SEO e performance</h2>
+        </div>
+        <p>Ajustes que ajudam a transformar visitantes em contatos reais.</p>
+      </div>
+
+      <div class="priority-list">
+        <article class="priority-card"><div><strong>Sem link <code>tel:</code></strong><p>Todo contato direciona para o WhatsApp. Adicionar <code>&lt;a href="tel:+5547992897343"&gt;</code> ajuda quem prefere ligar direto.</p></div></article>
+        <article class="priority-card"><div><strong>Sem medição de clique nos CTAs de WhatsApp</strong><p>A página tem 3 links de WhatsApp diferentes e nenhum Analytics ou Tag Manager configurado. Sem isso, não dá para saber qual raia converte mais.</p></div></article>
+        <article class="priority-card"><div><strong>Nota e quantidade de avaliações do Google ainda não confirmadas</strong><p>Antes de exibir qualquer selo no Google, confirmar o número real.</p></div></article>
+        <article class="priority-card"><div><strong>Sem aviso de privacidade no rodapé</strong><p>O site direciona contato via WhatsApp, que coleta nome e telefone da conversa. Um link curto de política de privacidade no rodapé é uma boa prática.</p></div></article>
+      </div>
+    </section>
   </main>
 
   <footer class="analysis-footer">
     <div class="analysis-footer__inner">
-      <a class="footer-link" href="./index.html">Abrir projeto novo</a>
-      <a class="footer-link" href="../index.html">Galeria completa</a>
-      <a class="footer-link" href="https://lotuspilatesjlle.com.br/" target="_blank" rel="noopener">Site oficial da Lótus</a>
+      <a class="analysis-button analysis-button--primary" href="../index.html">Voltar</a>
     </div>
   </footer>
 </body>
